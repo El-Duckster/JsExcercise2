@@ -1,0 +1,421 @@
+// @use '../../global-styles/global.scss' as *;
+// *{
+//     box-sizing: border-box;
+//     margin: 0;
+// }
+// body {
+//   margin: 0;
+//   width: 480px;
+//   height: 100vh;
+//   @include font-style();
+// }
+
+// .header {
+//   color: white;
+//   background-color: $color-navy;
+//   .header__top-area {
+//     display: flex;
+//     flex-direction: row;
+//     align-content: space-around;
+//     width: 480px;
+//     height: 144px;
+
+//     .header__top-area__left {
+//       display: flex;
+//       flex-direction: row;
+//       justify-items: center;
+//       align-items: center;
+//       width: 50%;
+
+//       .header__logo {
+//         margin: $size-default;
+//         min-height: 82px;
+//         min-width: 128px;
+//         border-radius: 1rem;
+//         display: block;
+//         .header__logo-img {
+//           height: 100%;
+//           width: 100%;
+//         }
+//       }
+//       .header__title {
+//         @include font-bold(1.5rem);
+//         height: 84px;
+//         width: 78px;
+//         margin: 0;
+//       }
+//     }
+//   }
+//   .nav {
+//     display: none;
+//   }
+// }
+// //*************main******************
+// .main {
+//   background-color: bisque;
+// //   width: 480px;
+//   .main__image {
+//     display:block;
+//     width: 480px;
+//     height: 274px;
+//     .main__image-img{
+//         width: 480px;
+//         height: 274px;
+
+//     }
+//   }
+//   .main__btns{
+//     display: flex;
+//     justify-content: space-around;
+//     // border: solid;
+//     // border-color: red;
+//     height: 160px;
+//     width: 480px;
+//     margin: 0.5rem;
+
+//     .main__btns-list{
+//         // border: solid;
+//         // color: blue;
+//         display: flex;
+//         justify-content: center;
+//         align-items: center;
+//         // height: 100%;
+//         width: 480px;
+//         list-style: none;
+//         flex-direction:column;
+//         .main__btns-item{
+//             // border: solid;
+//             // color: aquamarine;
+//             display:flex;
+//             .main__btn{
+//                 width:308px;
+//                 height: 66px;
+//                 @include font-bold(1.5rem) ;//24px
+//                 color:$color-navy;
+//                 background-color: $color-light-blue;
+//                 border: none;
+//                 border-radius: 0.3rem;
+
+//                 &.online{
+//                     color: $color-light-blue;
+//                     background-color: transparent;
+//                     text-decoration: underline;
+//                    font-size: 1rem;//16px
+
+//                 }
+//             }
+//         }
+//     }
+//   }
+// }
+
+// .testimonials{
+//     // border: solid;
+//     // padding: 5px;
+//     margin: 10px;
+//     width: 439px;
+//     height: 139px;
+//     display: flex;
+//     align-items: center;
+//     align-items: flex-start;
+
+//     // flex-direction: row;
+//     // .testimonial{
+//         //     display: none;
+//         // }
+//         // .testimonial--active{
+//             //     display: flex;
+//             //     justify-content: space-between;
+//             .testimonial-container{
+//                 // width: 439px;
+//                 // height: 139px;
+//                 // border: solid;
+//                 // border-color: blueviolet;
+//             display: flex;
+//             align-items: center;
+//             align-items: flex-start;
+
+//             .testimonial-text{
+//                 margin-left: 20px;;
+//                 // border: solid;
+//                 display: flex; 
+//                 flex-direction: column;
+//                 justify-content: space-between;
+                
+//                 .testimonial__quote{
+//                     @include font-italic(1.5rem);//24px;
+                 
+//                 }
+//                 .testimonial__author{
+//                     height: 21px;
+
+                    
+//                     // padding-left: 10px;
+//                     @include font-style(1.125rem);//18px
+                    
+        
+//                 }
+//             }
+//             .second{
+//                 display: none;
+//             }
+//             .testimonial--active{
+//                 display: flex;
+//                 flex-direction: row;
+//                 // border: solid;
+//                 // border-color: red;
+//             height: 139px;
+//                 width: 439px;
+//             .pic-container{
+                
+//                 // height: 139px;
+//     // border: solid;
+//     // color: thistle;
+    
+//         .author-pic{
+//             display: block;
+//             height:73.34px ;
+//             width: 72px;
+            
+//             .testimonial__img{
+//                 height: 100%;
+//                 width: 100%;
+//             }
+//         }
+//         }
+//         }
+//         }
+//     }
+// // }
+// // }
+
+
+// // .rooms {
+// //     position: relative;
+// //     width: 100%;
+// //     overflow: hidden;
+  
+// //     .rooms__slider {
+// //       position: relative;
+// //       width: 100%;
+  
+// //       // Hide radio buttons
+// //       input[type="radio"] {
+// //         display: none;
+// //       }
+  
+// //       .rooms__list {
+// //         display: flex;
+// //         transition: transform 0.5s ease-in-out;
+// //         width: calc(100% * 3);  // Assuming 3 cards
+  
+// //         // Each room card
+// //         .room {
+// //           flex: 1 0 100%;  // Each room takes 100% width
+// //           padding: 10px;
+// //           box-sizing: border-box;
+// //           background-color: #fff;
+// //           border: 1px solid #ddd;
+// //           border-radius: 8px;
+// //           margin: 0 15px;
+// //           text-align: center;
+// //         }
+// //       }
+  
+// //       // Slide controls using radio buttons
+// //       #slide1:checked ~ .rooms__list {
+// //         transform: translateX(0);
+// //       }
+  
+// //       #slide2:checked ~ .rooms__list {
+// //         transform: translateX(-100%);
+// //       }
+  
+// //       #slide3:checked ~ .rooms__list {
+// //         transform: translateX(-200%);
+// //       }
+// //     }
+// //   }
+  
+
+// //////////////////////Desktop view//////////////////////////////////
+
+// @include large-screen {
+//   body {
+//     width: 1280px;
+//   }
+//   .header {
+//     width: 100%;
+//     height: 216px;
+//     .header__top-area {
+//       display: flex;
+//       flex-direction: row;
+//       // align-content: space-around;
+//       // align-content:baseline;
+//       width: 1280px;
+//       height: 110px;
+
+//       .header__top-area__left {
+//         display: flex;
+//         flex-direction: row;
+//         width: 100%;
+//         height: 108px;
+//         // justify-content:end;
+//         align-items: end;
+
+//         .header__title {
+//           @include font-bold(2.5rem);
+//           padding-bottom: 1.3rem;
+//           width: 600px;
+//           height: 47px;
+//         }
+
+//         .header__logo {
+//           display: block;
+//           height: 82px;
+//           width: 128px;
+
+//           .header__logo-img {
+//             object-fit: contain;
+//           }
+//         }
+//       }
+//     }
+
+//     .nav {
+//         width: 100%;
+//         height: 100px;
+//         display: flex;
+//         .nav__list {
+//             display: flex;
+//             flex-direction: row;
+//             width: 90%;
+//             align-items:center;
+//             flex-wrap: wrap;
+//             justify-content: space-evenly;
+//             list-style: none;
+//             @include font-bold(1.5rem);
+//             align-content: space-evenly;
+//             // align-content: space-evenly;
+//             .nav__item {
+//           &:hover {
+//             color: $color-light-blue;
+//           }
+//         }
+//       }
+//     }
+//   }
+//   .main {
+//     .main__image {
+//         display:block;
+//         width: 1280px;
+//         height: 468px;
+//         .main__image-img{
+//             width: 100%;
+//             height: 100%;
+//   }
+// }
+// .main__btns{
+//     display: flex;
+//     justify-content: space-around;
+//     position: absolute;
+//     top: 625px;
+//     left: 323px;
+//     width: 650px;
+//     height: 100px;
+//     width: 620px;
+ 
+//     .main__btns-list{
+//         width:100%;
+//         display: flex;
+//         flex-direction: row-reverse;
+//         .main__btns-item{
+//             margin: 10px;
+
+//             .main__btn{
+
+//                 &.online{
+//                     background-color: $color-red;
+//                     color:white;
+//                     text-decoration: none;
+//                     @include font-bold(1.5rem)//24
+
+//                 }
+//             }
+//         }
+//     }
+//   }
+
+
+
+
+//   }
+
+//   .testimonials{
+//     // border: solid;
+//     // padding: 5px;
+//     // margin: 10px;
+//     width: 1250px;
+//     height: 141px;
+//     display: flex;
+//     align-items: center;
+//     align-items: flex-start;
+//     margin-top: 150px;
+//     // flex-direction: row;
+//     // .testimonial{
+//         //     display: none;
+//         // }
+//         // .testimonial--active{
+//             //     display: flex;
+//             //     justify-content: space-between;
+//             .testimonial-container{
+//                 // border: solid brown;
+//                 width:1250px;
+//                 height: 141px;
+//                 display: flex;
+//                 justify-content: space-evenly;
+//                 .testimonial{
+//                     height: 141px;
+//                     width: 550px;
+//                 }
+                
+//             .second{
+//                 display: flex;
+//                 // border: solid aqua;
+
+//             }
+            
+//             .testimonial-text{
+//                 display: flex; 
+//                 flex-direction: column;
+//                 justify-content: space-between;
+//                 // border: solid forestgreen;
+//                 .testimonial__quote{
+//                     @include font-italic(1.5rem);//24px;
+//                 }
+//                 .testimonial__author{
+//                     padding-right:10px ;
+//                     width: 285px;
+//                     height: 42px;
+//                     @include font-style(1.125rem);//18px
+        
+//                 }
+//             }
+//             .testimonial--active{
+
+//             .pic-container{
+    
+//         .author-pic{
+//             display: block;
+//             height:96px ;
+//             width: 96px;
+            
+//             .testimonial__img{
+//                 height: 100%;
+//                 width: 100%;
+//             }
+//         }
+//         }
+//         }
+//     }
+// }}

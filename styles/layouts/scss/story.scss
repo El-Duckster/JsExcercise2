@@ -1,0 +1,151 @@
+@use '../../global-styles/_colors.scss' as *;
+@use '../../global-styles/_fonts.scss' as *;
+@use '../../global-styles/_screens.scss' as *;
+@use '../../global-styles/_buttons.scss' as *;
+
+
+.story {
+    display: flex;
+    width: 100%;
+    height: auto; // Flexible height
+    background-color: $color-navy;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+  
+    .story__container {
+      width: 90%; 
+      max-width: 400px; 
+      text-align: center; 
+      
+      .story__intro {
+        margin-bottom: 1rem; 
+        padding: 1rem; 
+        color: white;
+        @include font-style(1.75rem); 
+    line-height: 1.4;  
+    // line-height-step: 6;
+    }
+  
+      .story__btn {
+        // width: 90%; 
+//         padding: 1rem 2.5rem; 
+//         background-color: transparent;
+//         border-radius: 6px;
+//         color: $color-light-blue;
+//         @include font-bold(1.2rem); 
+//         cursor: pointer;
+//         transition: all 0.3s ease;
+
+//       // text 197 x 28
+//     //   width: 70%;//308 /480
+//     //   height:13.2%; //66px /500
+// max-width: 308px;
+// min-width: 220px;
+// min-height: 66px;
+//   margin: 0 auto ;
+//   padding:0 55px 0 55px; //55px
+
+//   padding-bottom: 19px;
+@include button-styles(transparent, $color-light-blue);
+@include font-bold(1.1rem) ;
+border: 2px solid $color-light-blue;
+
+    //   @include font-bold(1.5rem); //24px
+        // &:hover{
+        //   background-color: $color-light-blue;
+        //   color: $color-navy;
+        // }
+        // &:active {
+        //     background-color: $color-light-blue; 
+        //     color: $color-navy; 
+        //     transition: background-color 0.2s ease, color 0.2s ease;
+        //   }
+      }
+    }
+
+  
+    /* Larger screens */
+    @include large-screen {
+      .story__container {
+        max-width: 632px;
+        .story__intro {
+            @include font-style(1.75rem); 
+            line-height: 2rem;
+        }
+        .story__btn {
+          width: auto; 
+          max-width: 308px;
+          min-height: 66px;
+        }
+      }
+    }
+  }
+  
+
+
+
+// @use '../../global-styles/_colors.scss' as *;
+// @use '../../global-styles/_fonts.scss' as *;
+// @use '../../global-styles/_screens.scss' as *;
+
+// .story {
+//   display: flex;
+//   width: 100%; //480px
+//   height: 31.25rem; // 500px
+//   // width: 100vh;
+//   // height:39%; //500px
+//   background-color: $color-navy;
+//   align-content: center;
+
+//   .story__container {
+//     width: 100%;
+//     height: 100%;
+//     display: flex;
+//     flex-direction: column;
+//     border: solid burlywood;
+//     margin: auto;
+//     justify-content: center;
+//     border: solid yellow;
+
+//       min-height: 234px; //234, desktop169
+//     .story__intro {
+//       border: solid;
+//       // width: 100%;
+//       align-self: center;
+//       height: 234px;
+//       width: 80%; //439
+//     //   height: 46.8%;
+//       padding: 0 auto auto auto;
+//       margin-bottom: 1%;
+//       @include font-style(1.75rem);
+//       text-align: center;
+//       color: white;
+//       // margin: auto;¨
+//       @include large-screen {
+//         max-width: 632px; //632/1280
+//         max-height: 169px;
+//       }
+//     }
+//     .story__btn {
+//       // text 197 x 28
+//       width: 64.16%;//308 /480
+//       height:13.2%; //66px /500
+// max-width: 308px;
+// min-width: 220px;
+// min-height: 66px;
+//       margin: 0 auto ;
+//     //   padding:0 55px 0 55px; //55px
+      
+//     //   padding-bottom: 19px;
+//       background-color: transparent;
+//       border: 2px solid $color-light-blue;
+//       border-radius: 6px;
+//       color: $color-light-blue;
+//       @include font-bold(1.5rem); //24px
+
+//       &:active{
+
+//       }
+//     }
+

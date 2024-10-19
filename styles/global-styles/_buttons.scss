@@ -1,0 +1,12 @@
+@use '_fonts.scss' as *;
+@mixin button-styles($bg-color, $text-color, $border-radius: 0.3rem, $font-size: 1.1rem) {
+    background-color: $bg-color;
+    color: $text-color;
+    max-width:308px;
+    max-height: 66px;
+    padding: 15px 30px;
+    border: none;
+    border-radius: $border-radius;
+    cursor: pointer;
+    @include font-bold($font-size);
+  }
