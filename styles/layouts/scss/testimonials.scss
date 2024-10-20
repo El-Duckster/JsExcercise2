@@ -1,0 +1,114 @@
+@use '../../global-styles/_colors.scss' as *;
+@use '../../global-styles/_fonts.scss' as *;
+@use '../../global-styles/_screens.scss' as *;
+@use '../../global-styles/_buttons.scss' as *;
+
+.testimonials {
+  display: flex;
+  align-items: center;
+  align-items: flex-start;
+  border: solid rgb(247, 102, 12);
+  height: auto;
+  width: 100vw;
+  flex-shrink: 1;
+
+  .testimonial-container {
+    border: solid blueviolet;
+    width: 95vw;
+    max-width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    flex-shrink: 1;
+    .testimonial-text {
+      margin-left: 10px; //
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border: solid yellowgreen;
+      height: auto;
+      flex-shrink: 1;
+
+      .testimonial__quote {
+        border: solid royalblue;
+        flex-shrink: 1;
+
+        @include font-italic(1.1rem); //24px;
+
+        height: auto;
+      }
+      .testimonial__author {
+        border: solid brown;
+        width: 100%;
+        height: auto;
+        // padding-left: 10px;
+        @include font-style(0.8rem); //18px
+      }
+    }
+    .second {
+      display: none;
+    }
+    .testimonial--active {
+      display: flex;
+      flex-direction: row;
+
+      height: auto; //139
+
+      .pic-container {
+        .author-pic {
+          display: block;
+          height: 73.34px;
+          width: 72px;
+
+          .testimonial__img {
+            height: 100%;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+@include large-screen {
+  .testimonials {
+    max-width: 1250px;
+
+    display: flex;
+    align-items: center;
+    align-items: flex-start;
+    margin-top: 150px;
+
+    .testimonial-container {
+      .second {
+        display: flex;
+      }
+
+      .testimonial-text {
+        .testimonial__quote {
+          @include font-italic(1.5rem); //24px;
+        }
+        .testimonial__author {
+          padding-right: 10px;
+
+          @include font-style(1.125rem); //18px
+        }
+      }
+      .testimonial--active {
+        .pic-container {
+          .author-pic {
+            display: block;
+            height: 96px;
+            width: 96px;
+
+            .testimonial__img {
+              height: 100%;
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}

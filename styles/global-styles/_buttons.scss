@@ -1,12 +1,27 @@
 @use '_fonts.scss' as *;
-@mixin button-styles($bg-color, $text-color, $border-radius: 0.3rem, $font-size: 1.1rem) {
-    background-color: $bg-color;
-    color: $text-color;
-    max-width:308px;
-    max-height: 66px;
-    padding: 15px 30px;
-    border: none;
-    border-radius: $border-radius;
-    cursor: pointer;
-    @include font-bold($font-size);
-  }
+@use '_colors.scss' as *;
+
+@mixin button-styles(
+  $bg-color,
+  $text-color,
+  $border-radius: 0.3rem,
+  $font-size: 1.1rem
+) {
+  background-color: $bg-color;
+  color: $text-color;
+  max-width: 308px;
+  max-height: 66px;
+  padding: 15px 30px;
+  border: none;
+  border-radius: $border-radius;
+  cursor: pointer;
+  @include font-bold($font-size);
+}
+
+@mixin button-primary() {
+  @include button-styles($color-red, white);
+}
+
+@mixin button-secondary(){
+  @include button-styles($color-light-blue, $color-navy);
+}

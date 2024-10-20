@@ -42,8 +42,12 @@
             
         }
         .play__btn{
+
+
+
             width: 72.9%; //21+21 +308/480
-            @include button-styles($color-red, white);
+            @include button-primary();
+            // @include button-styles($color-red, white);
             // @include font-bold(1.5rem);
             @include font-bold(1.1rem) ;
         }
@@ -63,6 +67,7 @@
             width:100vw;
             max-width: 1280px;
             display: grid;
+            gap: 0;
             grid-template-columns: repeat(2, 1fr);;
             grid-template-rows: auto auto;
             align-items: center;
