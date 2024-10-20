@@ -1,0 +1,118 @@
+@use '../../global-styles/_colors.scss' as *;
+@use '../../global-styles/_fonts.scss' as *;
+@use '../../global-styles/_screens.scss' as *;
+@use '../../global-styles/_buttons.scss' as *;
+@use '../../global-styles/_room-card.scss' as *;
+
+.rooms {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border: solid red;
+  height: auto;
+  margin: 50px 0 50px;
+  padding: 20px 0;
+  max-width: 1280px;
+
+  .rooms__title {
+    border: solid rgb(81, 130, 9);
+    text-align: center;
+    justify-content: center;
+    padding: 10px;
+    margin: auto;
+  }
+
+  .rooms__list {
+    display: flex;
+    // transition: transform 0.5s ease-in-out;
+    width: 100%;
+    border: solid fuchsia;
+    justify-content: space-around;
+
+    .roomy {
+      width: 100%; // Takes full width
+      max-width: 363px;
+      margin: 10px;
+      overflow: hidden;
+      border:none;
+      box-shadow: inset;
+
+      .room__image-container {
+        border-radius: 8px;
+        width: 100%;
+        // overflow: hidden;
+      
+
+        .room__img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+    .room__details {
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      .room__details__title {
+        // color: red;
+        @include font-style($size: 1.7rem);
+        padding-top: 0.5rem;
+        &::after {
+          content: ' (on-site)';
+          display: inline;
+        }
+      }
+
+      .room__details-info{
+        display: flex;
+        
+        justify-content: space-between;
+        padding: 5px;
+        .room__participants{
+          @include font-style($size: 0.9rem) //14px
+        }
+        .room__ratings {
+          display: flex;
+          align-items: center;
+          margin: 5px 0;
+        }
+        
+      }
+      .room__description{
+      margin-bottom: 30px
+      }
+      .room__btn{
+        @include button-primary();
+        align-self:flex-end;
+  
+      }
+    }
+    // Each room card
+    .room {
+      flex: 1 0 100%; // Each room takes 100% width
+      padding: 10px;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      margin: 0 15px;
+      text-align: center;
+    }
+  }
+
+  // Slide controls using radio buttons
+  #slide1:checked ~ .rooms__list {
+    transform: translateX(0);
+  }
+
+  #slide2:checked ~ .rooms__list {
+    transform: translateX(-100%);
+  }
+
+  #slide3:checked ~ .rooms__list {
+    transform: translateX(-200%);
+  }
+
+  .rooms__slider {
+    text-align: center;
+  }
+}

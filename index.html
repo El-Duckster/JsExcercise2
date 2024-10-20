@@ -51,19 +51,18 @@
             alt="a hodied Hacker trying to solve a coding problem to escape our room"
           />
         </div>
-
-        <div class="main__btns">
-          <ul class="main__btns-list">
-            <li class="main__btns-item">
-              <button class="main__btn onsite">On-site challenges</button>
-            </li>
-            <li class="main__btns-item">
-              <button class="main__btn online">Online challenges</button>
-            </li>
-          </ul>
-        </div>
       </div>
-
+      
+      <div class="main__btns">
+        <ul class="main__btns-list">
+          <li class="main__btns-item">
+            <button class="main__btn onsite">On-site challenges</button>
+          </li>
+          <li class="main__btns-item">
+            <button class="main__btn online">Online challenges</button>
+          </li>
+        </ul>
+      </div>
       <section class="testimonials">
         <div class="testimonial-container">
           <div class="testimonial testimonial--active">
@@ -79,101 +78,143 @@
             </div>
             <div class="testimonial-text">
               <p class="testimonial__quote">
-                This is a quote about how amazing this place is and how much fun
-                me and my friends had when we tried it
+                This is a quote 1 about how amazing this place is and how much fun me
+                and my friends had when we tried it.
               </p>
-              <p class="testimonial__author">
-                John Doe, visited us in September 2021
-              </p>
+              <p class="testimonial__author">John Doe, visited us in September 2021</p>
             </div>
           </div>
-
-          <div class="testimonial second">
-            <div class="author-pic">
-              <img
-                class="testimonial__img"
-                src="./assets/images/profilePictures/johnDoe.png"
-                loading="lazy"
-                alt="pic: John Doe"
-              />
+      
+          <div class="testimonial">
+            <div class="pic-container">
+              <div class="author-pic">
+                <img
+                  class="testimonial__img"
+                  src="./assets/images/profilePictures/johnDoe.png"
+                  loading="lazy"
+                  alt="pic: John Doe"
+                />
+              </div>
             </div>
             <div class="testimonial-text">
               <p class="testimonial__quote">
-                This is a quote about how amazing this place is and how much fun
-                me and my friends had when we tried it
+                This is a quote 2 about how amazing this place is and how much fun me
+                and my friends had when we tried it.
               </p>
-              <p class="testimonial__author">
-                John Doe, visited us in September 2021
-              </p>
+              <p class="testimonial__author">John Doe, visited us in September 2021</p>
             </div>
           </div>
         </div>
-      </section>
 
-      <!-- <section class="rooms">
+        <div class="dots">
+          <div class="dot active"></div> <!-- Active dot -->
+          <div class="dot"></div>        <!-- Inactive dot -->
+        </div>
+
+      </section>
+      
+
+      <section class="rooms">
         <h1 class="rooms__title">Popular challenges right now</h1>
       
-        <div class="rooms__slider">
-          <!-- Radio buttons for controlling the slider -->
-      <!-- <input type="radio" name="slider" id="slide1" checked>
-          <input type="radio" name="slider" id="slide2">
-          <input type="radio" name="slider" id="slide3">
-      
-          <!-- Slide container with cards -->
-      <!-- <div class="rooms__list">
-            <label for="slide1" class="room">
-                <div></div>
-              <img
-                class="room__img"
-                src="./assets/images/gallery/image 2.png"
-                alt="Room 1"
-              />
-              <h1 class="room__title">Title of room (on-site)</h1>
-              <div class="room__details">
-                <div class="room__ratings">Ratings</div>
-                <div class="room__participants">2-6 participants</div>
-              </div>
-              <p class="room__description">Short description of the room goes here.</p>
+        <!-- Slide container with cards  -->
+        <div class="rooms__list">
+          <label for="slide1" class="roomy room1">
+            <div class="room__image-container">
+            <img
+            class="room__img"
+            src="./assets/images/gallery/image3.png"
+            alt="Room 1"
+            />
+          </div>
+          <div class="room__details">
+              <h1 class="room__details__title">Title of room</h1>
+              <div class="room__details-info">
+                <div class="room__ratings">
+                  <img class="filled" src="assets\svg\star-filled.svg" alt="Star Rating">
+                  <img class="filled" src="assets\svg\star-filled.svg" alt="Star Rating">
+                  <img class="filled" src="assets\svg\star-filled.svg" alt="Star Rating">
+                  <img class="filled" src="assets\svg\star-filled.svg" alt="Star Rating">
+                  <img class="unfilled" src="assets\svg\star.svg" alt="Star Rating">
+
+                </div>
+                
+
+              <div class="room__participants">2-6 participants</div>
+            </div>
+              <p class="room__description">Praeterea, ex culpa non invenies unum aut non accusatis unum. Et nihil inuitam. Nemo nocere tibi erit, et non inimicos, et.</p>
               <button class="room__btn">Book this room</button>
+            </div>
             </label>
-      
-            <label for="slide2" class="room">
+            
+            <label for="slide2" class="roomy room2">
+              <div class="room__image-container">
               <img
                 class="room__img"
-                src="./assets/images/gallery/image 2.png"
+                src="./assets/images/gallery/image3.png"
                 alt="Room 2"
               />
-              <h1 class="room__title">Title of room (on-site)</h1>
-              <div class="room__details">
-                <div class="room__ratings">Ratings</div>
+            </div>
+            <div class="room__details">
+                <h1 class="room__details__title">Title of room</h1>
+                <div class="room__details-info">
+                  <div class="room__ratings">
+                    <img class="filled" src="assets\svg\star-filled.svg" alt="Star Rating">
+                    <img class="filled" src="assets\svg\star-filled.svg" alt="Star Rating">
+                    <img class="filled" src="assets\svg\star-filled.svg" alt="Star Rating">
+                    <img class="filled" src="assets\svg\star-filled.svg" alt="Star Rating">
+                    <img class="unfilled" src="assets\svg\star.svg" alt="Star Rating">
+                  </div>
                 <div class="room__participants">2-6 participants</div>
               </div>
-              <p class="room__description">Short description of the room goes here.</p>
+              <p class="room__description">Praeterea, ex culpa non invenies unum aut non accusatis unum. Et nihil inuitam. Nemo nocere tibi erit, et non inimicos, et</p>
               <button class="room__btn">Book this room</button>
+            </div>
             </label>
       
-            <label for="slide3" class="room">
+            <label for="slide3" class="roomy room3">
+              <div class="room__image-container">
               <img
                 class="room__img"
-                src="./assets/images/gallery/image 2.png"
+                src="./assets/images/gallery/image3.png"
                 alt="Room 3"
-              />
-              <h1 class="room__title">Title of room (on-site)</h1>
-              <div class="room__details">
-                <div class="room__ratings">Ratings</div>
-                <div class="room__participants">2-6 participants</div>
+                />
               </div>
-              <p class="room__description">Short description of the room goes here.</p>
-              <button class="room__btn">Book this room</button>
-            </label>
+              <div class="room__details">
+                  <h1 class="room__details__title">Title of room</h1>
+                  <div class="room__details-info">
+                    <div class="room__ratings">
+                      <img class="filled" src="assets\svg\star-filled.svg" alt="Star Rating">
+                      <img class="filled" src="assets\svg\star-filled.svg" alt="Star Rating">
+                      <img class="filled" src="assets\svg\star-filled.svg" alt="Star Rating">
+                      <img class="filled" src="assets\svg\star-filled.svg" alt="Star Rating">
+                      <img class="unfilled" src="assets\svg\star.svg" alt="Star Rating">
+                    </div>
+                  <div class="room__participants">2-6 participants</div>
+                </div>
+                <p class="room__description">Praeterea, ex culpa non invenies unum aut non accusatis unum. Et nihil inuitam. Nemo nocere tibi erit, et non inimicos, et</p>
+                <button class="room__btn">Book this room</button>
+              </div>
+              </label>
+            </div>
           </div>
-        </div>
-      </section> -->
+          <div class="rooms__slider">
+         <input type="radio" name="slider" id="slide1" checked>
+            <input type="radio" name="slider" id="slide2">
+            <input type="radio" name="slider" id="slide3">
+      </section>
 
-      <!-- <div class="main__btns">
-        <button class="main__btn">Online challenges</button>
-        <button class="main__btn">On-site challenges</button>
-      </div> -->
+      <div class="main__btns">
+        <ul class="main__btns-list">
+          <li class="main__btns-item">
+            <button class="main__btn onsite">On-site challenges</button>
+          </li>
+          <li class="main__btns-item">
+            <button class="main__btn online">Online challenges</button>
+          </li>
+        </ul>
+      </div>
+    
 
       <section class="story">
         <div class="story__container">

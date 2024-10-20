@@ -2,106 +2,145 @@
 @use '../../global-styles/_fonts.scss' as *;
 @use '../../global-styles/_screens.scss' as *;
 @use '../../global-styles/_buttons.scss' as *;
+@use '../../global-styles/_dots.scss' as *;
+// @use '../../global-styles/_carousel-animation.scss' as *;
 
+// Testimonials styles
+// Testimonials styles
+// Testimonials styles
+// Testimonials styles
 .testimonials {
-  display: flex;
-  align-items: center;
-  align-items: flex-start;
-  border: solid rgb(247, 102, 12);
-  height: auto;
-  width: 100vw;
-  flex-shrink: 1;
-
-  .testimonial-container {
-    border: solid blueviolet;
-    width: 95vw;
-    max-width: 100%;
-    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: auto;
-    flex-shrink: 1;
-    .testimonial-text {
-      margin-left: 10px; //
+    width: 100vw;
+    height: auto;
+    position: relative;
+    border: solid blue;
+    margin-bottom: 20px;
+  
+    .testimonial-container {
       display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      border: solid yellowgreen;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      width: 95vw;
       height: auto;
-      flex-shrink: 1;
-
-      .testimonial__quote {
-        border: solid royalblue;
-        flex-shrink: 1;
-
-        @include font-italic(1.1rem); //24px;
-
+      overflow: hidden;
+  
+      .testimonial {
+        position: absolute; // Testimonials are stacked on top of each other
+        opacity: 0; // Initially hidden
+        visibility: hidden; // Hidden but keeps the space/layout
+        transition: opacity 1s ease-in-out, visibility 0.5; // Delay visibility change slightly longer
+        display: flex;
+        flex-direction: row;
+        width: 98vw;
+        height: auto;
+        border: solid pink;
+      }
+  
+      .testimonial--active {
+        opacity: 1;
+        visibility: visible; // Make the active testimonial visible
+        display: flex;
+        position: relative;
+        transition: opacity 1s ease-in-out, visibility 0.5s; // No delay when becoming visible
+      }
+  
+      .testimonial-text {
+        margin-left: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
         height: auto;
       }
-      .testimonial__author {
-        border: solid brown;
-        width: 100%;
-        height: auto;
-        // padding-left: 10px;
-        @include font-style(0.8rem); //18px
-      }
-    }
-    .second {
-      display: none;
-    }
-    .testimonial--active {
-      display: flex;
-      flex-direction: row;
-
-      height: auto; //139
-
+  
       .pic-container {
         .author-pic {
-          display: block;
-          height: 73.34px;
+          height: 73px;
           width: 72px;
-
+          border-radius: 50%;
+  
           .testimonial__img {
             height: 100%;
             width: 100%;
+            border-radius: 50%;
           }
         }
       }
     }
   }
-}
-@include large-screen {
-  .testimonials {
-    max-width: 1250px;
-
-    display: flex;
-    align-items: center;
-    align-items: flex-start;
-    margin-top: 150px;
-
-    .testimonial-container {
-      .second {
-        display: flex;
-      }
-
-      .testimonial-text {
-        .testimonial__quote {
-          @include font-italic(1.5rem); //24px;
+  
+  // Carousel animation using keyframes
+  @keyframes carouselAnimation {
+    0%, 75% {
+      opacity: 1; // Visible for 75% of the time
+      visibility: visible;
+    }
+    80%, 100% {
+      opacity: 0;
+      visibility: hidden; // Hidden earlier to avoid overlap
+    }
+  }
+  
+  // Apply the animation to alternate between testimonials
+  .testimonial-container .testimonial:nth-child(1) {
+    animation: carouselAnimation 12s infinite ease-in-out;
+  }
+  
+  .testimonial-container .testimonial:nth-child(2) {
+    animation: carouselAnimation 12s infinite ease-in-out 6s; // Starts 6s later
+  }
+  
+  // Media queries for responsiveness
+  @include small-screen {
+    .testimonials {
+      flex-direction: column;
+  
+      .testimonial-container {
+        .testimonial {
+          width: 90vw; // Adjust width for small screens
         }
-        .testimonial__author {
-          padding-right: 10px;
-
-          @include font-style(1.125rem); //18px
-        }
       }
-      .testimonial--active {
+    }
+  }
+
+  @include large-screen {
+    .testimonials {
+      max-width: 1250px;
+      margin-top: 150px;
+      flex-direction: row;
+      align-items: center;
+  
+      .testimonial-container {
+        .testimonial {
+          opacity: 1; // Both testimonials visible
+          position: static; // Reset position for large screens
+          animation: none; // No animation on large screens
+          visibility: visible;
+        }
+  
+        .dots {
+          display: none; // Hide dots on large screens
+        }
+  
+        .testimonial-text {
+          .testimonial__quote {
+            @include font-italic(1.5rem);
+          }
+  
+          .testimonial__author {
+            padding-right: 10px;
+            @include font-style(1.125rem);
+          }
+        }
+  
         .pic-container {
           .author-pic {
-            display: block;
             height: 96px;
             width: 96px;
-
+  
             .testimonial__img {
               height: 100%;
               width: 100%;
@@ -111,4 +150,119 @@
       }
     }
   }
-}
+
+// Carousel Animation Mixin
+
+// @use '../../global-styles/_colors.scss' as *;
+// @use '../../global-styles/_fonts.scss' as *;
+// @use '../../global-styles/_screens.scss' as *;
+// @use '../../global-styles/_buttons.scss' as *;
+
+// .testimonials {
+//   display: flex;
+//   align-items: center;
+//   align-items: flex-start;
+//   height: auto;
+//   width: 100vw;
+//   flex-shrink: 1;
+
+//   .testimonial-container {
+//     border: solid blueviolet;
+//     width: 95vw;
+//     max-width: 100%;
+//     height: auto;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     margin: auto;
+//     flex-shrink: 1;
+//     .testimonial-text {
+//       margin-left: 10px; //
+//       display: flex;
+//       flex-direction: column;
+//       justify-content: space-between;
+//       border: solid yellowgreen;
+//       height: auto;
+//       flex-shrink: 1;
+
+//       .testimonial__quote {
+//         border: solid royalblue;
+//         flex-shrink: 1;
+
+//         @include font-italic(1.1rem); //24px;
+
+//         height: auto;
+//       }
+//       .testimonial__author {
+//         border: solid brown;
+//         width: 100%;
+//         height: auto;
+//         // padding-left: 10px;
+//         @include font-style(0.8rem); //18px
+//       }
+//     }
+//     .second {
+//       display: none;
+//     }
+//     .testimonial--active {
+//       display: flex;
+//       flex-direction: row;
+
+//       height: auto; //139
+
+//       .pic-container {
+//         .author-pic {
+//           display: block;
+//           height: 73.34px;
+//           width: 72px;
+
+//           .testimonial__img {
+//             height: 100%;
+//             width: 100%;
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+// @include large-screen {
+//   .testimonials {
+//     max-width: 1250px;
+
+//     display: flex;
+//     align-items: center;
+//     align-items: flex-start;
+//     margin-top: 150px;
+
+//     .testimonial-container {
+//       .second {
+//         display: flex;
+//       }
+
+//       .testimonial-text {
+//         .testimonial__quote {
+//           @include font-italic(1.5rem); //24px;
+//         }
+//         .testimonial__author {
+//           padding-right: 10px;
+
+//           @include font-style(1.125rem); //18px
+//         }
+//       }
+//       .testimonial--active {
+//         .pic-container {
+//           .author-pic {
+//             display: block;
+//             height: 96px;
+//             width: 96px;
+
+//             .testimonial__img {
+//               height: 100%;
+//               width: 100%;
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
