@@ -36,7 +36,7 @@
     }
     .play__description {
       display: block;
-      @include font-style(1.5rem);
+      @include font-style($size :1.5rem);
       padding: 1.5rem 0;
     }
     .play__btn {
@@ -57,7 +57,7 @@
 
     .play__container {
       width: 100vw;
-      max-width: 1280px;
+      max-width: 2000px;
       display: grid;
       gap: 0;
       grid-template-columns: repeat(2, 1fr);

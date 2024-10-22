@@ -6,12 +6,52 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0"
     />
-    <title>Document</title>
+    <title>Hacker Escape Rooms - Play Online & Onsite Challenges</title>
+    <meta name="description" content="Unlock the ultimate hacker escape room experience! Test your skills with immersive online and onsite challenges. Perfect for team-building or a fun night out. Book your adventure today!" />
+    <meta name="keywords" content="hacker escape rooms, immersive escape games, online escape rooms, team-building activities, onsite challenges" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+ <!-- Open Graph for Social Media Sharing -->
+ <meta property="og:title" content="Hacker Escape Rooms - The Ultimate Online & Onsite Challenges" />
+ <meta property="og:description" content="Dive into our thrilling hacker-themed escape rooms, available online and onsite. Challenge yourself, your friends, or your team. Book your adventure now!" />
+ <meta property="og:image" content="https:Hacker-escape-room.com/assets/images/logo/image1.png" />
+ <meta property="og:url" content="https://Hacker-escape-room.com.com" />
+ <meta property="og:type" content="website" />
+
+ <!-- Twitter Card Meta Tags (Optional) -->
+ <meta name="twitter:card" content="image" />
+ <meta name="twitter:title" content="Join the Hacker Escape Room Adventure - Online & Onsite!" />
+ <meta name="twitter:description" content="Book your escape room experience today! Perfect for groups, parties, and corporate team-building events. Get ready for a thrilling challenge." />
+ <meta name="twitter:image" content="Hacker-escape-room.com/assets/images/logo/image1.png" />
+
     <link
       rel="stylesheet"
       href="styles/layouts/css/style.css"
     />
+
+
+  <!--  Data for Local Business (SEO) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Hacker Escape Rooms",
+      "image": "Hacker-escape-room.com/assets/images/logo/image1.png",
+      "description": "Experience hacker-themed escape rooms like never before! Whether you're playing online or onsite, our thrilling challenges are perfect for teams, families, and friends. Book today!",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "12345 Escape gata.",
+        "addressLocality": "Escape City",
+        "addressRegion": "EC",
+        "postalCode": "12345",
+        "addressCountry": "Sweden"
+      },
+      "telephone": "+46700000000",
+      "openingHours": "Mo-Su 09:00-22:00"
+    }
+    </script>
   </head>
+
   <body>
     <header class="header">
       <div class="header__top-area">
@@ -46,13 +86,13 @@
         <div class="main__image">
           <img
             class="main__image-img"
-            src="./assets/images/gallery/image 2.png"
+            src="./assets/images/gallery/image1.png"
             loading="lazy"
             alt="a hodied Hacker trying to solve a coding problem to escape our room"
           />
         </div>
       </div>
-      
+
       <div class="main__btns">
         <ul class="main__btns-list">
           <li class="main__btns-item">
@@ -78,13 +118,15 @@
             </div>
             <div class="testimonial-text">
               <p class="testimonial__quote">
-                This is a quote 1 about how amazing this place is and how much fun me
-                and my friends had when we tried it.
+                This is a quote 1 about how amazing this place is and how much
+                fun me and my friends had when we tried it.
               </p>
-              <p class="testimonial__author">John Doe, visited us in September 2021</p>
+              <p class="testimonial__author">
+                John Doe, visited us in September 2021
+              </p>
             </div>
           </div>
-      
+
           <div class="testimonial">
             <div class="pic-container">
               <div class="author-pic">
@@ -98,110 +140,245 @@
             </div>
             <div class="testimonial-text">
               <p class="testimonial__quote">
-                This is a quote 2 about how amazing this place is and how much fun me
-                and my friends had when we tried it.
+                This is a quote 2 about how amazing this place is and how much
+                fun me and my friends had when we tried it.
               </p>
-              <p class="testimonial__author">John Doe, visited us in September 2021</p>
+              <p class="testimonial__author">
+                John Doe, visited us in September 2021
+              </p>
             </div>
           </div>
         </div>
-
-        <div class="dots">
-          <div class="dot active"></div> <!-- Active dot -->
-          <div class="dot"></div>        <!-- Inactive dot -->
-        </div>
-
       </section>
-      
 
-      <section class="rooms">
-        <h1 class="rooms__title">Popular challenges right now</h1>
-      
+      <section
+        class="rooms carousel"
+        aria-label="rooms n prepmises"
+      >
         <!-- Slide container with cards  -->
-        <div class="rooms__list">
-          <label for="slide1" class="roomy room1">
+        <h1 class="rooms__title">Popular challenges right now</h1>
+        <ol class="rooms__list carousel__viewport">
+          <!-- <div class="rooms__list"> -->
+          <li
+            id="room__carousel__slide1"
+            tabindex="0"
+            class="carousel__slide roomy room1"
+          >
             <div class="room__image-container">
-            <img
-            class="room__img"
-            src="./assets/images/gallery/image3.png"
-            alt="Room 1"
-            />
-          </div>
-          <div class="room__details">
-              <h1 class="room__details__title">Title of room</h1>
-              <div class="room__details-info">
-                <div class="room__ratings">
-                  <img class="filled" src="assets\svg\star-filled.svg" alt="Star Rating">
-                  <img class="filled" src="assets\svg\star-filled.svg" alt="Star Rating">
-                  <img class="filled" src="assets\svg\star-filled.svg" alt="Star Rating">
-                  <img class="filled" src="assets\svg\star-filled.svg" alt="Star Rating">
-                  <img class="unfilled" src="assets\svg\star.svg" alt="Star Rating">
-
-                </div>
-                
-
-              <div class="room__participants">2-6 participants</div>
-            </div>
-              <p class="room__description">Praeterea, ex culpa non invenies unum aut non accusatis unum. Et nihil inuitam. Nemo nocere tibi erit, et non inimicos, et.</p>
-              <button class="room__btn">Book this room</button>
-            </div>
-            </label>
-            
-            <label for="slide2" class="roomy room2">
-              <div class="room__image-container">
               <img
                 class="room__img"
-                src="./assets/images/gallery/image3.png"
-                alt="Room 2"
+                src="./assets/images/gallery/image1.png"
+                alt="room1 - description of room 1"
               />
             </div>
             <div class="room__details">
-                <h1 class="room__details__title">Title of room</h1>
-                <div class="room__details-info">
-                  <div class="room__ratings">
-                    <img class="filled" src="assets\svg\star-filled.svg" alt="Star Rating">
-                    <img class="filled" src="assets\svg\star-filled.svg" alt="Star Rating">
-                    <img class="filled" src="assets\svg\star-filled.svg" alt="Star Rating">
-                    <img class="filled" src="assets\svg\star-filled.svg" alt="Star Rating">
-                    <img class="unfilled" src="assets\svg\star.svg" alt="Star Rating">
-                  </div>
+              <h1 class="room__details__title">Title of room</h1>
+              <div class="room__details-info">
+                <div class="room__ratings">
+                  <img
+                    class="filled"
+                    src="assets\svg\star-filled.svg"
+                    alt="Star Rating"
+                  />
+                  <img
+                    class="filled"
+                    src="assets\svg\star-filled.svg"
+                    alt="Star Rating"
+                  />
+                  <img
+                    class="filled"
+                    src="assets\svg\star-filled.svg"
+                    alt="Star Rating"
+                  />
+                  <img
+                    class="filled"
+                    src="assets\svg\star-filled.svg"
+                    alt="Star Rating"
+                  />
+                  <img
+                    class="unfilled"
+                    src="assets\svg\star.svg"
+                    alt="Star Rating"
+                  />
+                </div>
                 <div class="room__participants">2-6 participants</div>
               </div>
-              <p class="room__description">Praeterea, ex culpa non invenies unum aut non accusatis unum. Et nihil inuitam. Nemo nocere tibi erit, et non inimicos, et</p>
+              <p class="room__description">
+                Praeterea, ex culpa non invenies unum aut non accusatis unum. Et
+                nihil inuitam. Nemo nocere tibi erit, et non inimicos, et.
+              </p>
               <button class="room__btn">Book this room</button>
             </div>
-            </label>
-      
-            <label for="slide3" class="roomy room3">
-              <div class="room__image-container">
+            <div class="carousel__snapper">
+              <a
+                href="#room__carousel__slide3"
+                class="carousel__prev"
+                aria-label="go to room 3"
+              ></a>
+              <a
+                href="#room__carousel__slide2"
+                class="carousel__next"
+                aria-label="go to room 3"
+              ></a>
+            </div>
+          </li>
+
+          <li
+            id="room__carousel__slide2"
+            tabindex="1"
+            class="carousel__slide roomy room2"
+          >
+            <div class="room__image-container">
               <img
                 class="room__img"
-                src="./assets/images/gallery/image3.png"
-                alt="Room 3"
-                />
-              </div>
-              <div class="room__details">
-                  <h1 class="room__details__title">Title of room</h1>
-                  <div class="room__details-info">
-                    <div class="room__ratings">
-                      <img class="filled" src="assets\svg\star-filled.svg" alt="Star Rating">
-                      <img class="filled" src="assets\svg\star-filled.svg" alt="Star Rating">
-                      <img class="filled" src="assets\svg\star-filled.svg" alt="Star Rating">
-                      <img class="filled" src="assets\svg\star-filled.svg" alt="Star Rating">
-                      <img class="unfilled" src="assets\svg\star.svg" alt="Star Rating">
-                    </div>
-                  <div class="room__participants">2-6 participants</div>
-                </div>
-                <p class="room__description">Praeterea, ex culpa non invenies unum aut non accusatis unum. Et nihil inuitam. Nemo nocere tibi erit, et non inimicos, et</p>
-                <button class="room__btn">Book this room</button>
-              </div>
-              </label>
+                src="./assets/images/gallery/image1.png"
+                alt="room2 - description of room 2"
+              />
             </div>
-          </div>
-          <div class="rooms__slider">
-         <input type="radio" name="slider" id="slide1" checked>
-            <input type="radio" name="slider" id="slide2">
-            <input type="radio" name="slider" id="slide3">
+            <div class="room__details">
+              <h1 class="room__details__title">Title of room</h1>
+              <div class="room__details-info">
+                <div class="room__ratings">
+                  <img
+                    class="filled"
+                    src="assets\svg\star-filled.svg"
+                    alt="Star Rating"
+                  />
+                  <img
+                    class="filled"
+                    src="assets\svg\star-filled.svg"
+                    alt="Star Rating"
+                  />
+                  <img
+                    class="filled"
+                    src="assets\svg\star-filled.svg"
+                    alt="Star Rating"
+                  />
+                  <img
+                    class="filled"
+                    src="assets\svg\star-filled.svg"
+                    alt="Star Rating"
+                  />
+                  <img
+                    class="unfilled"
+                    src="assets\svg\star.svg"
+                    alt="Star Rating"
+                  />
+                </div>
+
+                <div class="room__participants">2-6 participants</div>
+              </div>
+              <p class="room__description">
+                Praeterea, ex culpa non invenies unum aut non accusatis unum. Et
+                nihil inuitam. Nemo nocere tibi erit, et non inimicos, et.
+              </p>
+              <button class="room__btn">Book this room</button>
+            </div>
+            <div class="carousel__snapper">
+              <a
+                href="#room__carousel__slide1"
+                class="carousel__prev"
+                aria-label="go to room 1"
+              ></a>
+              <a
+                href="#room__carousel__slide3"
+                class="carousel__next"
+                aria-label="go to room 3"
+              ></a>
+            </div>
+          </li>
+
+          <li
+            id="room__carousel__slide3"
+            tabindex="2"
+            class="carousel__slide roomy room3"
+          >
+            <div class="room__image-container">
+              <img
+                class="room__img"
+                src="./assets/images/gallery/image1.png"
+                alt="room3 - description of room 3"
+              />
+            </div>
+            <div class="room__details">
+              <h1 class="room__details__title">Title of room</h1>
+              <div class="room__details-info">
+                <div class="room__ratings">
+                  <img
+                    class="filled"
+                    src="assets\svg\star-filled.svg"
+                    alt="Star Rating"
+                  />
+                  <img
+                    class="filled"
+                    src="assets\svg\star-filled.svg"
+                    alt="Star Rating"
+                  />
+                  <img
+                    class="filled"
+                    src="assets\svg\star-filled.svg"
+                    alt="Star Rating"
+                  />
+                  <img
+                    class="filled"
+                    src="assets\svg\star-filled.svg"
+                    alt="Star Rating"
+                  />
+                  <img
+                    class="unfilled"
+                    src="assets\svg\star.svg"
+                    alt="Star Rating"
+                  />
+                </div>
+
+                <div class="room__participants">2-6 participants</div>
+              </div>
+              <p class="room__description">
+                Praeterea, ex culpa non invenies unum aut non accusatis unum. Et
+                nihil inuitam. Nemo nocere tibi erit, et non inimicos, et.
+              </p>
+              <button class="room__btn">Book this room</button>
+            </div>
+            <div class="carousel__snapper">
+              <a
+                href="#room__carousel__slide2"
+                class="carousel__prev"
+                aria-label="go to room 2"
+              ></a>
+              <a
+                href="#room__carousel__slide1"
+                class="carousel__next"
+                aria-label="go to room 1"
+              ></a>
+            </div>
+          </li>
+        </ol>
+
+        <aside class="carousel__navigation">
+          <ol class="carousel__navigation-list">
+            <li class="carousel__navigation-item">
+              <a
+                href="#room__carousel__slide1"
+                class="carousel__navigation-button"
+                >Go to slide 1</a
+              >
+            </li>
+            <li class="carousel__navigation-item">
+              <a
+                href="#room__carousel__slide2"
+                class="carousel__navigation-button"
+                >Go to slide 2</a
+              >
+            </li>
+            <li class="carousel__navigation-item">
+              <a
+                href="#room__carousel__slide3"
+                class="carousel__navigation-button"
+                >Go to slide 3</a
+              >
+            </li>
+          </ol>
+        </aside>
       </section>
 
       <div class="main__btns">
@@ -214,7 +391,6 @@
           </li>
         </ul>
       </div>
-    
 
       <section class="story">
         <div class="story__container">
@@ -274,7 +450,9 @@
           <div class="footer__about item1">
             <h1 class="footer__title">[Esc] Hacker Escape Rooms</h1>
             <p class="footer__text">
-                Quodsi haberent magnalia inter potentiam et divitias, et non illam quidem haec eo spectant haec quoque vos omnino desit illud quo solo felicitatis libertatisque perficiuntur.
+              Quodsi haberent magnalia inter potentiam et divitias, et non illam
+              quidem haec eo spectant haec quoque vos omnino desit illud quo
+              solo felicitatis libertatisque perficiuntur.
             </p>
           </div>
           <div class="footer__site-map item2">

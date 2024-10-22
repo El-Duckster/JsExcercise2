@@ -16,7 +16,7 @@
     margin-top: 7rem;
     align-items:center;
     justify-content: center;
-    @include font-style(1.125rem);
+    @include font-style($size:1.125rem);
     
     .footer__title{
         @include font-bold(1.125rem);

@@ -7,7 +7,7 @@
     justify-content: space-around;
     height: auto;
     width: 100%;//480
-    max-width: 700px;
+    max-width: 44rem;
     margin: auto;
     border:solid greenyellow;
     
@@ -64,8 +64,12 @@
                     background-color: $color-red;
                     color:white;
                     text-decoration: none;
-                    @include font-bold(1.5rem)//24
+                    @include font-bold(1.4rem);//24;
+                    min-width:100%;
 
+                }
+                &.onsite{
+                    min-width: 100%;
                 }
             }
         }

@@ -108,7 +108,7 @@
 
   @include large-screen {
     .testimonials {
-      max-width: 1250px;
+      max-width: 2000px;
       margin-top: 150px;
       flex-direction: row;
       align-items: center;
@@ -132,7 +132,7 @@
   
           .testimonial__author {
             padding-right: 10px;
-            @include font-style(1.125rem);
+            @include font-style($size: 1.125rem);
           }
         }
   

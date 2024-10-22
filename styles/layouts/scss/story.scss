@@ -22,7 +22,7 @@
         margin-bottom: 1rem; 
         padding: 1rem; 
         color: white;
-        @include font-style(1.75rem); 
+        @include font-style($size: 1.75rem); 
     line-height: 1.4;  
     // line-height-step: 6;
     }
@@ -70,7 +70,7 @@ border: 2px solid $color-light-blue;
       .story__container {
         max-width: 632px;
         .story__intro {
-            @include font-style(1.75rem); 
+            @include font-style($size: 1.75rem); 
             line-height: 2rem;
         }
         .story__btn {
