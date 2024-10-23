@@ -2,30 +2,37 @@
 @use '../../global-styles/_fonts.scss' as *;
 @use '../../global-styles/_screens.scss' as *;
 @use '../../global-styles/_buttons.scss' as *;
+
+
 .main__btns{
     display: flex;
     justify-content: space-around;
     height: auto;
-    width: 100%;//480
-    max-width: 44rem;
+    // width: 100%;//480
+padding-left: 0;
     margin: auto;
     border:solid greenyellow;
+    margin: 3rem ;//10px 
     
     .main__btns-list{
-        border:solid blue;
-     
+
+        border:solid firebrick;
+        margin: auto;     
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 100vh; //480
+        width: 100%; //480
         flex-direction:column;
         .main__btns-item{
             border: solid purple;
-            display:flex;
+            // margin: auto;
+            // display:flex;
+            // width: 100%;
             .main__btn{
                 @include font-bold(1.5rem) ;//24px
                 color:$color-navy;
                 border-radius: 0.3rem;
+                border: solid lawngreen;
                 
 
                 &.onsite{
@@ -55,7 +62,6 @@
         display: flex;
         flex-direction: row-reverse;
         .main__btns-item{
-            margin: 0.6rem ;//10px 
             width:100%;//308-10/1280
 
             .main__btn{

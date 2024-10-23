@@ -19,7 +19,6 @@
 body {
   margin: auto;
   width: 100vw; //480px
-  height: 100vh;
   max-width:2000px;
   @include font-style();
  
@@ -27,36 +26,40 @@ body {
 
 ol, ul{
     list-style: none;
+    padding-inline-start: 0;
+    margin: 0;
 }
 
 //*************main******************
 .main {
   width: 100vw;// 480
   max-width: 2000px;
-  background-color: bisque;
+  height: 10%;
+  // background-color: bisque;
   .main__image {
     display:block;
     width: 100vw;// 480 px
-   object-fit:fill;
+    object-fit:fill;
     min-width:370px;
     .main__image-img{
-        width: 100%; //480
-        height: auto; // 274px
-
-
+      width: 100%; //480
+      // height: auto; // 274px
+      
+      
     }
   }
-
+  
 }
 
 @include large-screen {
-  // body {
-  //   max-width: 1280px;
-  // }
+  body{
+    border: 1px solid rgba(156, 153, 155, 0.2);
+  }
   
   .main {
     .main__top-area{
-    .main__image {
+      .main__image {
+        // background-image: url();
         display:block;
         width: 100vw; //1280
         // height: 468px;
