@@ -20,8 +20,18 @@
 
 @mixin button-primary() {
   @include button-styles($color-red, white);
+  &:hover {
+    background-color: white;
+    color: $color-red; 
+    border: 2px solid $color-red; 
+  }
 }
 
 @mixin button-secondary(){
   @include button-styles($color-light-blue, $color-navy);
+  &:hover {
+    background-color: $color-navy; // Change background color on hover
+    color: $color-light-blue; // Change text color on hover
+    border: 2px solid $color-light-blue;
+  }
 }

@@ -20,6 +20,7 @@ body {
   margin: auto;
   width: 100vw; //480px
   max-width:2000px;
+  min-width: 350px;
   @include font-style();
  
 }
@@ -32,15 +33,16 @@ ol, ul{
 
 //*************main******************
 .main {
-  width: 100vw;// 480
+  // width: 100vw;// 480
   max-width: 2000px;
-  height: 10%;
+  // height: 10%;
   // background-color: bisque;
   .main__image {
+    min-width:370px;
     display:block;
     width: 100vw;// 480 px
+    max-width: 2000px;
     object-fit:fill;
-    min-width:370px;
     .main__image-img{
       width: 100%; //480
       // height: auto; // 274px
@@ -53,22 +55,21 @@ ol, ul{
 
 @include large-screen {
   body{
-    border: 1px solid rgba(156, 153, 155, 0.2);
+    border: 1px solid $color-grey;
   }
   
   .main {
     .main__top-area{
+      max-width: 2000px;
+      height:45vh;
       .main__image {
-        // background-image: url();
-        display:block;
-        width: 100vw; //1280
-        // height: 468px;
-        height: auto;
-        width: auto;
+        height: 100%;
+      
         // position: relative;
         .main__image-img{
             width: 100%;
-            height: auto;
+            height: 100%;
+            object-fit:cover;
             // max-width: 100%;
             // position:relative;
   }

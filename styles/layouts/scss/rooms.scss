@@ -9,56 +9,68 @@
 .rooms {
   display: block;
   position:relative;
-  // border: solid red;
+ max-width: 2000px;
+  margin: 20px ;
 
 
   .rooms__title {
     // border: solid rgb(81, 130, 9);
     text-align: center;
     justify-content: center;
-    padding: 10px;
     margin: auto;
     position: absolute;
     top: 0;
     right: 0;
     width: 100%;
+    font-size:1.9rem;
+    font-weight: 400;
   }
 
   .rooms__list {
     display: flex;
-    width: 100%;
-    // border: solid fuchsia;
     justify-content: space-around;
-
+    width: 100%;
+    max-width: 2000px;
+    border-radius:15px ;    
+    margin: 10px;
+    
+    
     .roomy {
-      width: 100%; // Takes full width
-      max-width: 363px;
-      margin: 10px;
-      overflow: hidden;
-      border: none;
-      border-radius:7px ;
+      border-radius:15px ; 
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+      width: 95%; 
+      // // overflow: hidden;
+      // border: solid rgba(0, 0, 0, 0.1);
+      // border: solid 5px blue;
+      transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+
+      &:hover {
+        transform: translateY(-5px); 
+        box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3); 
+      }
 
       .room__image-container {
-        border-radius: 8px;
         width: 100%;
         height: auto;
-        // overflow: hidden;
 
 
+        
         .room__img {
           width: 100%;
           height: 100%;
+          object-fit: cover;
         }
       }
     }
     .room__details {
-      padding: 10px;
+      padding: 15px;
+      
       display: flex;
       flex-direction: column;
       .room__details__title {
         // color: red;
         @include font-style($size: 1.7rem);
-        padding-top: 0.5rem;
+        // padding-top: 1rem;
         &::after {
           content: ' (on-site)';
           display: inline;
@@ -67,41 +79,57 @@
 
       .room__details-info{
         display: flex;
-
-        justify-content: space-between;
-        padding: 5px;
+        width: 100%;
+        align-items: center;
+        justify-content: flex-start;
+        // border: solid 5px brown;
+        text-align: left;
         .room__participants{
-          @include font-style($size: 0.9rem) //14px
+          @include font-style($size: 0.8rem); //14px
+          padding: 0 0 5px 5px;
+          margin-left: 5px;
+          // border: solid 5px blue;
+          
         }
         .room__ratings {
           display: flex;
-          align-items: center;
-          margin: 5px 0;
+          // border: solid 5px pink;
+          // margin: 5px 0;
         }
 
       }
       .room__description{
-      margin-bottom: 30px
+      margin: 1.5rem 0 2rem 0;
+      font-size: 1.125rem;
       }
       .room__btn{
         @include button-primary();
+        font-size: 1rem;
+        width: 60%;
+        padding-top:0 ;
         align-self:flex-end;
 
+        
       }
     }
     // Each room card
-    .room {
-      flex: 1 0 100%; // Each room takes 100% width
-      padding: 10px;
-      background-color: #fff;
-      // border: 1px solid #ddd;
-      border-radius: 8px;
-      margin: 0 15px;
-      text-align: center;
-    }
+    // .room {
+    //   // flex: 1 0 100%; // Each room takes 100% width
+    //   padding: 10px;
+    //   background-color: #fff;
+    //   // border: 1px solid #ddd;
+    //   border-radius: 8px;
+    //   margin: 0 15px;
+    //   text-align: center;
+    // }
   }}
 
 
+  // @keyframes tonext {
+  //   75% { left: 0; }
+  //   95% { left: 100%; }
+  //   99% { left: 0; }
+  // }
 @keyframes tonext {
   75% {
     left: 0;
@@ -147,18 +175,7 @@
   }
 }
 
-// body {
-//   max-width: 37.5rem;
-//   margin: 0 auto;
-//   padding: 0 1.25rem;
-//   font-family: 'Lato', sans-serif;
-// }
 
-// * {
-//   box-sizing: border-box;
-//   scrollbar-color: transparent transparent; /* thumb and track color */
-//   scrollbar-width: 0px;
-// }
 
 *::-webkit-scrollbar {
   width: 0;
@@ -177,11 +194,7 @@
   -ms-overflow-style: none;
 }
 
-ol, li {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
+
 
 .carousel {
   position: relative;
@@ -208,20 +221,21 @@ ol, li {
   width: 100%;
   // background-color: #f99;
   counter-increment: item;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  // border: outset 1px $color-grey;
+  // border-radius: 15px;
 }
 
 // .carousel__slide:nth-child(even) {
-//   background-color: #99f;
-// }
-
-.carousel__slide:before {  //kan tas bort
-  content: counter(item);
-  position: absolute;
-  top: 50%;
+  //   background-color: #99f;
+  // }
+  
+  .carousel__slide:before {  //kan tas bort
+    content: counter(item);
+    position: absolute;
+    top: 50%;
   left: 50%;
   transform: translate3d(-50%,-40%,70px);
-  color: #fff;
+  color: $color-light-blue;
   font-size: 2em;
 }
 
@@ -229,9 +243,11 @@ ol, li {
   position: absolute;
   top: 0;
   left: 0;
+  // width: 363px;
   width: 100%;
   height: 100%;
   scroll-snap-align: center;
+
 }
 
 @media (hover: hover) {
@@ -278,40 +294,44 @@ ol, li {
   display: inline-block;
   width: 1.5rem;
   height: 1.5rem;
+  transform:translateY(3rem);
   background-color:$color-light-blue;
   background-clip: content-box;
   border: 0.1rem solid $color-blue;
   border-radius: 50%;
   font-size: 0;
+  margin: 10px;
   transition: transform 0.1s;
 }
 
 
 @include large-screen{
-
+  
 
   .carousel {
     position: static; // Reset absolute positioning on large screens
     padding-top: 0;   // Remove padding
   }
-
+  
   .carousel__viewport {
-    position: static; // Reset absolute positioning for viewport
-    padding: 0;       // Remove any extra padding
+    position: static; 
+    padding: 0;       
     display: flex;
-    overflow: visible; // Remove scroll for desktop view
+    overflow: visible; 
     justify-content: space-between;
+    overflow-x: scroll;
+    scroll-snap-align: start;
   }
-
+  
   .carousel__slide {
-    flex: 1 0 30%;   // Each slide takes up 30% of the width on large screens
-    width: auto;     // Remove the forced 100% width for desktop view
-    position: static; // Reset position for each slide
-    background-color: transparent; // Remove the background color for desktop view
+    flex: 1 0 30%;   
+    width: auto;     
+    position: static; 
+    background-color: transparent; 
   }
-
+  
   .carousel__slide:before {
-    content: ''; // Remove the counter on large screens by setting content to an empty string
+    content: ''; 
   }
   .carousel__navigation-button,
   .carousel:before,
@@ -320,58 +340,45 @@ ol, li {
   .carousel::after,
   .carousel__prev,
   .carousel__next {
-    display: none; // Hide the numbers, navigation buttons, and arrows
+    display: none; 
   }
 
   .rooms {
     display: flex;
     position: static;
     flex-direction: column;
-    width: 100%;
+    width: 100vw;
     // border: solid red;
     height: auto;
-    margin: 50px 0 50px;
+    margin: 50px 0 100px;
     max-width: 2000px;
-
     .rooms__title{
       // border: solid rgb(81, 130, 9);
       position: static;
       text-align: center;
       justify-content: center;
       padding: 10px;
-      margin: auto;
-    }
-
-    .rooms__list .carousel__viewport{
-      display: flex;
-      // transition: transform 0.5s ease-in-out;
-      width: 100%;
-      // border: solid fuchsia;
-      justify-content: space-around;
-
-      // .roomy {
-        width: 100%; // Takes full width
-        max-width: 363px;
-        margin: 10px;
-        flex-wrap: no-wrap; // Grid-like layout
-        overflow: visible;
-        border:none;
+      font-size:2.25rem ;
       
+      margin: 4rem auto 4rem;
+    }
+  }
+    
+    .rooms__list{
+      // border: solid 5px blue;
+      display: flex;
+      width: 95vw;
+       padding: 1.5%;  
+      justify-content: space-around;
+      .roomy{
+        margin: 0 1.5%;
+        flex-wrap: no-wrap;
+                overflow: visible;
 
-        .room__image-container {
-          border-radius: 8px;
-          width: 100%;
-          // overflow: hidden;
 
-
-          .room__img {
-            width: 100%;
-            height: 100%;
-          }
-        }
       }
       .room__details {
-        padding: 10px;
+        // padding: 10px;
         display: flex;
         flex-direction: column;
         .room__details__title {
@@ -383,42 +390,27 @@ ol, li {
             display: inline;
           }
         }
-
-        .room__details-info{
-          display: flex;
-
-          justify-content: space-between;
-          padding: 5px;
-          .room__participants{
-            @include font-style($size: 0.9rem) //14px
-          }
-          .room__ratings {
-            display: flex;
-            align-items: center;
-            margin: 5px 0;
-          }
-
-        }
-        .room__description{
-        margin-bottom: 30px
-        }
-        .room__btn{
-          @include button-primary();
-          align-self:flex-end;
-
-        }
       }
-      // Each room card
-      .room {
-        flex: 1 0 100%; // Each room takes 100% width
-        padding: 10px;
-        background-color: #fff;
-        // border: 1px solid #ddd;
-        border-radius: 8px;
-        margin: 0 15px;
-        text-align: center;
+        
+      .room__details-info{
+        display: flex;
+        justify-content: space-between;
+        
+    
+      .room__participants{
+        // text-align:right;
+        margin-left: auto;
+        @include font-style($size: 0.9rem) ;//14px
+        padding: 0;
       }
+      .room__ratings {
+  margin-right: auto;
+      
+
+      }
+    
     }
-  }
+    }
+    }
 
 // }

@@ -1,54 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8" >
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0"
-    />
+    >
     <title>Hacker Escape Rooms - Play Online & Onsite Challenges</title>
-    <meta name="description" content="Unlock the ultimate hacker escape room experience! Test your skills with immersive online and onsite challenges. Perfect for team-building or a fun night out. Book your adventure today!" />
-    <meta name="keywords" content="hacker escape rooms, immersive escape games, online escape rooms, team-building activities, onsite challenges" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; object-src 'none'"
+    >
 
- <!-- Open Graph for Social Media Sharing -->
- <meta property="og:title" content="Hacker Escape Rooms - The Ultimate Online & Onsite Challenges" />
- <meta property="og:description" content="Dive into our thrilling hacker-themed escape rooms, available online and onsite. Challenge yourself, your friends, or your team. Book your adventure now!" />
- <meta property="og:image" content="https:Hacker-escape-room.com/assets/images/logo/image1.png" />
- <meta property="og:url" content="https://Hacker-escape-room.com.com" />
- <meta property="og:type" content="website" />
+    <meta
+      name="description"
+      content="Unlock the ultimate hacker escape room experience! Test your skills with immersive online and onsite challenges. Perfect for team-building or a fun night out. Book your adventure today!"
+    >
+    <meta
+      name="keywords"
+      content="hacker escape rooms, immersive escape games, online escape rooms, team-building activities, onsite challenges"
+    >
+    <meta
+      http-equiv="X-UA-Compatible"
+      content="IE=edge"
+    >
 
- <!-- Twitter Card Meta Tags (Optional) -->
- <meta name="twitter:card" content="image" />
- <meta name="twitter:title" content="Join the Hacker Escape Room Adventure - Online & Onsite!" />
- <meta name="twitter:description" content="Book your escape room experience today! Perfect for groups, parties, and corporate team-building events. Get ready for a thrilling challenge." />
- <meta name="twitter:image" content="Hacker-escape-room.com/assets/images/logo/image1.png" />
+    <!-- Open Graph for Social Media Sharing -->
+    <meta
+      property="og:title"
+      content="Hacker Escape Rooms - The Ultimate Online & Onsite Challenges"
+    >
+    <meta
+      property="og:description"
+      content="Dive into our thrilling hacker-themed escape rooms, available online and onsite. Challenge yourself, your friends, or your team. Book your adventure now!"
+    >
+    <meta
+      property="og:image"
+      content="https:Hacker-escape-room.com/assets/images/logo/image1.png"
+    >
+    <meta
+      property="og:url"
+      content="https://Hacker-escape-room.com.com"
+    >
+    <meta
+      property="og:type"
+      content="website"
+    >
+
+    <!-- Twitter Card Meta Tags (Optional) -->
+    <meta
+      name="twitter:card"
+      content="image"
+    >
+    <meta
+      name="twitter:title"
+      content="Join the Hacker Escape Room Adventure - Online & Onsite!"
+    >
+    <meta
+      name="twitter:description"
+      content="Book your escape room experience today! Perfect for groups, parties, and corporate team-building events. Get ready for a thrilling challenge."
+    >
+    <meta
+      name="twitter:image"
+      content="Hacker-escape-room.com/assets/images/logo/image1.png"
+    >
 
     <link
       rel="stylesheet"
       href="styles/layouts/css/main.css"
-    />
+    >
 
-
-  <!--  Data for Local Business (SEO) -->
+    <!--  Data for Local Business (SEO) -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "Hacker Escape Rooms",
-      "image": "Hacker-escape-room.com/assets/images/logo/image1.png",
-      "description": "Experience hacker-themed escape rooms like never before! Whether you're playing online or onsite, our thrilling challenges are perfect for teams, families, and friends. Book today!",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "12345 Escape gata.",
-        "addressLocality": "Escape City",
-        "addressRegion": "EC",
-        "postalCode": "12345",
-        "addressCountry": "Sweden"
-      },
-      "telephone": "+46700000000",
-      "openingHours": "Mo-Su 09:00-22:00"
-    }
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Hacker Escape Rooms",
+        "image": "Hacker-escape-room.com/assets/images/logo/image1.png",
+        "description": "Experience hacker-themed escape rooms like never before! Whether you're playing online or onsite, our thrilling challenges are perfect for teams, families, and friends. Book today!",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "12345 Escape gata.",
+          "addressLocality": "Escape City",
+          "addressRegion": "EC",
+          "postalCode": "12345",
+          "addressCountry": "Sweden"
+        },
+        "telephone": "+46700000000",
+        "openingHours": "Mo-Su 09:00-22:00"
+      }
     </script>
   </head>
 
@@ -59,10 +99,10 @@
           <div class="header__logo">
             <img
               class="header__logo-img"
-              src="./assets/images/logo/image 4.png"
+              src="./assets/images/logo/image4.png"
               loading="eager"
               alt="ESC logo"
-            />
+            >
           </div>
           <div class="header__top-area__left-title">
             <h1 class="header__title">Hacker Escape Rooms</h1>
@@ -89,7 +129,7 @@
             src="./assets/images/gallery/image1.png"
             loading="lazy"
             alt="a hodied Hacker trying to solve a coding problem to escape our room"
-          />
+          >
         </div>
       </div>
 
@@ -103,62 +143,64 @@
           </li>
         </ul>
       </div>
-      <section class="testimonials">
-        <div class="testimonial-container">
-          <div class="testimonial testimonial--active">
-            <div class="pic-container">
-              <div class="author-pic">
+      <!--********************************testimonial ********************************-->
+      <div class="testimonials">
+        <div class="testimonials__container">
+          <ul class="testimonials__list">
+            <li class="testimonials__item testimonials__item--active">
+              <div class="testimonials__pic-container">
                 <img
-                  class="testimonial__img"
+                  class="testimonials__img"
                   src="./assets/images/profilePictures/johnDoe.png"
                   loading="lazy"
                   alt="pic: John Doe"
-                />
+                >
               </div>
-            </div>
-            <div class="testimonial-text">
-              <p class="testimonial__quote">
-                This is a quote 1 about how amazing this place is and how much
-                fun me and my friends had when we tried it.
-              </p>
-              <p class="testimonial__author">
-                John Doe, visited us in September 2021
-              </p>
-            </div>
-          </div>
+              <div class="testimonials__text">
+                <p class="testimonials__quote">
+                  This is a quote 1 about how amazing this place is and how much
+                  fun me and my friends had when we tried it.
+                </p>
+                <p class="testimonials__author">
+                  John Doe, visited us in September 2021
+                </p>
+              </div>
+            </li>
 
-          <div class="testimonial">
-            <div class="pic-container">
-              <div class="author-pic">
+            <li class="testimonials__item">
+              <div class="testimonials__pic-container">
                 <img
-                  class="testimonial__img"
+                  class="testimonials__img"
                   src="./assets/images/profilePictures/johnDoe.png"
                   loading="lazy"
                   alt="pic: John Doe"
-                />
+                >
               </div>
-            </div>
-            <div class="testimonial-text">
-              <p class="testimonial__quote">
-                This is a quote 2 about how amazing this place is and how much
-                fun me and my friends had when we tried it.
-              </p>
-              <p class="testimonial__author">
-                John Doe, visited us in September 2021
-              </p>
-            </div>
-          </div>
+
+              <div class="testimonials__text">
+                <p class="testimonials__quote">
+                  This is a quote 2 about how amazing this place is and how much
+                  fun me and my friends had when we tried it.
+                </p>
+                <p class="testimonials__author">
+                  Jane Doe, visited us in October 2021
+                </p>
+              </div>
+            </li>
+          </ul>
         </div>
-      </section>
+      </div>
 
-      <section
+       <!--********************************Rooms********************************-->
+      <article
         class="rooms carousel"
         aria-label="rooms n prepmises"
       >
         <!-- Slide container with cards  -->
-        <h1 class="rooms__title">Popular challenges right now</h1>
+        <h2 class="rooms__title">Popular challenges right now</h2>
         <ol class="rooms__list carousel__viewport">
           <!-- <div class="rooms__list"> -->
+
           <li
             id="room__carousel__slide1"
             tabindex="0"
@@ -168,39 +210,45 @@
               <img
                 class="room__img"
                 src="./assets/images/gallery/image1.png"
-                alt="room1 - description of room 1"
-              />
+                alt="room2 - description of room 1"
+                loading="lazy"
+              >
             </div>
             <div class="room__details">
-              <h1 class="room__details__title">Title of room</h1>
+              <h2 class="room__details__title">Title of room</h2>
               <div class="room__details-info">
                 <div class="room__ratings">
                   <img
                     class="filled"
-                    src="assets\svg\star-filled.svg"
+                    src="assets/svg/star-filled.svg"
                     alt="Star Rating"
-                  />
+                    loading="lazy"
+                  >
                   <img
                     class="filled"
-                    src="assets\svg\star-filled.svg"
+                    src="assets/svg/star-filled.svg"
                     alt="Star Rating"
-                  />
+                    loading="lazy"
+                  >
                   <img
                     class="filled"
-                    src="assets\svg\star-filled.svg"
+                    src="assets/svg/star-filled.svg"
                     alt="Star Rating"
-                  />
+                  >
                   <img
                     class="filled"
-                    src="assets\svg\star-filled.svg"
+                    src="assets/svg/star-filled.svg"
                     alt="Star Rating"
-                  />
+                    loading="lazy"
+                  >
                   <img
                     class="unfilled"
-                    src="assets\svg\star.svg"
+                    src="assets/svg/star.svg"
                     alt="Star Rating"
-                  />
+                    loading="lazy"
+                  >
                 </div>
+
                 <div class="room__participants">2-6 participants</div>
               </div>
               <p class="room__description">
@@ -218,14 +266,13 @@
               <a
                 href="#room__carousel__slide2"
                 class="carousel__next"
-                aria-label="go to room 3"
+                aria-label="go to room 2"
               ></a>
             </div>
           </li>
-
           <li
             id="room__carousel__slide2"
-            tabindex="1"
+            tabindex="2"
             class="carousel__slide roomy room2"
           >
             <div class="room__image-container">
@@ -233,37 +280,43 @@
                 class="room__img"
                 src="./assets/images/gallery/image1.png"
                 alt="room2 - description of room 2"
-              />
+                loading="lazy"
+              >
             </div>
             <div class="room__details">
-              <h1 class="room__details__title">Title of room</h1>
+              <h2 class="room__details__title">Title of room</h2>
               <div class="room__details-info">
                 <div class="room__ratings">
                   <img
                     class="filled"
-                    src="assets\svg\star-filled.svg"
+                    src="assets/svg/star-filled.svg"
                     alt="Star Rating"
-                  />
+                    loading="lazy"
+                  >
                   <img
                     class="filled"
-                    src="assets\svg\star-filled.svg"
+                    src="assets/svg/star-filled.svg"
                     alt="Star Rating"
-                  />
+                    loading="lazy"
+                    >
+                    <img
+                    class="filled"
+                    src="assets/svg/star-filled.svg"
+                    alt="Star Rating"
+                    loading="lazy"
+                  >
                   <img
                     class="filled"
-                    src="assets\svg\star-filled.svg"
+                    src="assets/svg/star-filled.svg"
                     alt="Star Rating"
-                  />
-                  <img
-                    class="filled"
-                    src="assets\svg\star-filled.svg"
-                    alt="Star Rating"
-                  />
+                    loading="lazy"
+                  >
                   <img
                     class="unfilled"
-                    src="assets\svg\star.svg"
+                    src="assets/svg/star.svg"
                     alt="Star Rating"
-                  />
+                    loading="lazy"
+                  >
                 </div>
 
                 <div class="room__participants">2-6 participants</div>
@@ -290,7 +343,7 @@
 
           <li
             id="room__carousel__slide3"
-            tabindex="2"
+            tabindex="3"
             class="carousel__slide roomy room3"
           >
             <div class="room__image-container">
@@ -298,37 +351,43 @@
                 class="room__img"
                 src="./assets/images/gallery/image1.png"
                 alt="room3 - description of room 3"
-              />
+                loading="lazy"
+              >
             </div>
             <div class="room__details">
-              <h1 class="room__details__title">Title of room</h1>
+              <h2 class="room__details__title">Title of room</h2>
               <div class="room__details-info">
                 <div class="room__ratings">
                   <img
                     class="filled"
-                    src="assets\svg\star-filled.svg"
+                    src="assets/svg/star-filled.svg"
                     alt="Star Rating"
-                  />
+                    loading="lazy"
+                  >
                   <img
                     class="filled"
-                    src="assets\svg\star-filled.svg"
+                    src="assets/svg/star-filled.svg"
                     alt="Star Rating"
-                  />
+                    loading="lazy"
+                  >
                   <img
                     class="filled"
-                    src="assets\svg\star-filled.svg"
+                    src="assets/svg/star-filled.svg"
                     alt="Star Rating"
-                  />
+                    loading="lazy"
+                  >
                   <img
                     class="filled"
-                    src="assets\svg\star-filled.svg"
+                    src="assets/svg/star-filled.svg"
                     alt="Star Rating"
-                  />
+                    loading="lazy"
+                  >
                   <img
                     class="unfilled"
-                    src="assets\svg\star.svg"
+                    src="assets/svg/star.svg"
                     alt="Star Rating"
-                  />
+                    loading="lazy"
+                  >
                 </div>
 
                 <div class="room__participants">2-6 participants</div>
@@ -379,7 +438,7 @@
             </li>
           </ol>
         </aside>
-      </section>
+      </article>
 
       <div class="main__btns">
         <ul class="main__btns-list">
@@ -391,51 +450,50 @@
           </li>
         </ul>
       </div>
-
+       <!--********************************story ********************************-->
       <section class="story">
         <div class="story__container">
-          <p class="story__intro">
+          <h2 class="story__intro">
             Quodsi haberent magnalia inter potentiam et divitias, et non illam
             quidem haec eo spectant haec quoque vos omnino desit illud quo solo
             felicitatis libertatisque perficiuntur.
-          </p>
+          </h2>
           <button class="story__btn">Read the full story</button>
         </div>
       </section>
-
-      <article class="play">
+      <!--********************************play ********************************-->
+      <div class="play">
         <div class="play__container">
           <div class="play__image__container item1">
             <img
               class="play__image"
-              src="./assets/images/gallery/nesa-by-makers-IgUR1iX0mqM-unsplash 1.png"
+              src="./assets/images/gallery/nesa-by-makers-IgUR1iX0mqM-unsplash1.png"
               loading="lazy"
-              alt=""
-            />
+              alt=" Nesa by makers- developers trying to solve our puzzel "
+            >
           </div>
           <section class="play__details item2">
-            <h1 class="play__title">
+            <h2 class="play__title">
               Play with your friends or build your team stronger at work
-            </h1>
+            </h2>
             <p class="play__description">
               Praeterea, ex culpa non invenies unum aut non accusatis unum. Et
               nihil inuitam. Nemo nocere tibi erit, et non inimicos, et
             </p>
-
             <button class="play__btn">Book on-site today</button>
           </section>
           <div class="play__image__container item3">
             <img
               class="play__image g3"
-              src="./assets/images/gallery/kelly-sikkema-YK0HPwWDJ1I-unsplash 1.png"
+              src="./assets/images/gallery/kelly-sikkema-YK0HPwWDJ1I-unsplash1.png"
               loading="lazy"
-              alt=""
-            />
+              alt="Kelly sikkema- trying to solve our puzzels"
+            >
           </div>
           <section class="play__details item4">
-            <h1 class="play__title">
+            <h2 class="play__title">
               Play online or visit our venue for one of our 25 escape rooms
-            </h1>
+            </h2>
             <p class="play__description">
               Praeterea, ex culpa non invenies unum aut non accusatis unum. Et
               nihil inuitam. Nemo nocere tibi erit, et non inimicos, et
@@ -443,21 +501,21 @@
             <button class="play__btn">See all challenges</button>
           </section>
         </div>
-      </article>
-
+      </div>
+  <!--********************************footer ********************************-->
       <footer class="footer">
         <div class="footer__content">
-          <div class="footer__about item1">
-            <h1 class="footer__title">[Esc] Hacker Escape Rooms</h1>
+          <section class="footer__about item1">
+            <h2 class="footer__title">[Esc] Hacker Escape Rooms</h1>
             <p class="footer__text">
               Quodsi haberent magnalia inter potentiam et divitias, et non illam
               quidem haec eo spectant haec quoque vos omnino desit illud quo
               solo felicitatis libertatisque perficiuntur.
             </p>
-          </div>
-          <div class="footer__site-map item2">
+          </section>
+          <section class="footer__site-map item2">
+            <h2 class="footer__item big">Site map</li>
             <ul class="footer__list">
-              <li class="footer__item big">Site map</li>
               <li class="footer__item">The Story</li>
               <li class="footer__item">Contact Us</li>
               <li class="footer__item">Legal</li>
@@ -466,15 +524,17 @@
               <li class="footer__item">Play online</li>
               <li class="footer__item">Play on-site</li>
             </ul>
-          </div>
-          <div class="footer__social item3">
+          </section>
+            
+          </section>
+          <section class="footer__social item3">
+            <h2 class="footer__item big">Follow us on</h2>
             <ul class="footer__list">
-              <li class="footer__item big">Follow us on</li>
               <li class="footer__item">Facebook</li>
               <li class="footer__item">Twitter</li>
               <li class="footer__item">Instagram</li>
             </ul>
-          </div>
+          </section>
         </div>
       </footer>
     </main>
