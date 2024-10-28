@@ -145,72 +145,87 @@
       </div>
       <!--********************************testimonial ********************************-->
       <div class="testimonials">
-        <div class="testimonials__container">
-          <ul class="testimonials__list">
-            <li class="testimonials__item testimonials__item--active">
-              <div class="testimonials__pic-container">
-                <img
-                  class="testimonials__img"
-                  src="./assets/images/profilePictures/johnDoe.png"
-                  loading="lazy"
-                  alt="pic: John Doe"
-                >
-              </div>
-              <div class="testimonials__text">
-                <p class="testimonials__quote">
-                  This is a quote 1 about how amazing this place is and how much
-                  fun me and my friends had when we tried it.
-                </p>
-                <p class="testimonials__author">
-                  John Doe, visited us in September 2021
-                </p>
-              </div>
-            </li>
-
-            <li class="testimonials__item">
-              <div class="testimonials__pic-container">
-                <img
-                  class="testimonials__img"
-                  src="./assets/images/profilePictures/johnDoe.png"
-                  loading="lazy"
-                  alt="pic: John Doe"
-                >
-              </div>
-
-              <div class="testimonials__text">
-                <p class="testimonials__quote">
-                  This is a quote 2 about how amazing this place is and how much
-                  fun me and my friends had when we tried it.
-                </p>
-                <p class="testimonials__author">
-                  Jane Doe, visited us in October 2021
-                </p>
+        <div class="testimonials__container carousel">
+          <ol class="carousel__viewport testimonials__list">
+            
+            <!-- Slide 1 -->
+            <li id="testimonial__carousel__slide1" class="testimonials__item carousel__slide" tabindex="0">
+              <figure class="testimonials__figure">
+                <div class="testimonials__pic-container">
+                  <img class="testimonials__img" src="./assets/images/profilePictures/johnDoe.png" loading="lazy" alt="pic: John Doe">
+                </div>
+                <div class="testimonials__text">
+                  <blockquote class="testimonials__quote">
+                    This is a quote about how amazing this place is and how much fun me and my friends had when we tried it.
+                  </blockquote>
+                  <figcaption class="testimonials__author">John Doe, visited us in September 2021</figcaption>
+                </div>
+              </figure>
+              
+              <!-- Snapper for slide navigation -->
+              <div class="carousel__snapper">
+                <a href="#testimonial__carousel__slide2" class="carousel__next">Go to next slide</a>
+                <a href="#testimonial__carousel__slide2" class="carousel__prev">Go to last slide</a>
               </div>
             </li>
-          </ul>
+      
+            <!-- Slide 2 -->
+            <li id="testimonial__carousel__slide2" class="testimonials__item carousel__slide" tabindex="0">
+              <figure class="testimonials__figure">
+                <div class="testimonials__pic-container">
+                  <img class="testimonials__img" src="./assets/images/profilePictures/johnDoe.png" loading="lazy" alt="pic: Jane Doe">
+                </div>
+                <div class="testimonials__text">
+                  <blockquote class="testimonials__quote">
+                    This is a quote about how amazing this place is and how much fun me and my friends had when we tried it.
+                  </blockquote>
+                  <figcaption class="testimonials__author">Jane Doe, visited us in October 2021</figcaption>
+                </div>
+              </figure>
+              
+              <!-- Snapper for slide navigation -->
+              <div class="carousel__snapper">
+                <a href="#testimonial__carousel__slide1" class="carousel__next">Go to next slide</a>
+                <a href="#testimonial__carousel__slide1" class="carousel__prev">Go to first slide</a>
+              </div>
+            </li>
+            
+          </ol>
         </div>
+      
+        <aside class="carousel__navigation">
+          <ol class="carousel__navigation-list">
+            <li class="carousel__navigation-item">
+              <a href="#testimonial__carousel__slide1" class="carousel__navigation-button">Go to slide 1</a>
+            </li>
+            <li class="carousel__navigation-item">
+              <a href="#testimonial__carousel__slide2" class="carousel__navigation-button">Go to slide 2</a>
+            </li>
+          </ol>
+        </aside>
       </div>
+            
 
        <!--********************************Rooms********************************-->
       <article
         class="rooms carousel"
-        aria-label="rooms n prepmises"
+        aria-label="rooms and challenges"
       >
         <!-- Slide container with cards  -->
         <h2 class="rooms__title">Popular challenges right now</h2>
         <ol class="rooms__list carousel__viewport">
-          <!-- <div class="rooms__list"> -->
+           <!-- <div class="rooms__list">  -->
 
           <li
             id="room__carousel__slide1"
             tabindex="0"
             class="carousel__slide roomy room1"
           >
-            <div class="room__image-container">
+            <div class="room__image-container"> 
               <img
                 class="room__img"
                 src="./assets/images/gallery/image1.png"
-                alt="room2 - description of room 1"
+                alt="room1 - description of room 1"
                 loading="lazy"
               >
             </div>
@@ -272,7 +287,7 @@
           </li>
           <li
             id="room__carousel__slide2"
-            tabindex="2"
+            tabindex="0"
             class="carousel__slide roomy room2"
           >
             <div class="room__image-container">
@@ -343,7 +358,7 @@
 
           <li
             id="room__carousel__slide3"
-            tabindex="3"
+            tabindex="0"
             class="carousel__slide roomy room3"
           >
             <div class="room__image-container">
@@ -449,7 +464,7 @@
             <button class="main__btn online">Online challenges</button>
           </li>
         </ul>
-      </div>
+      </div> 
        <!--********************************story ********************************-->
       <section class="story">
         <div class="story__container">

@@ -2,43 +2,53 @@
 @use '../../global-styles/_fonts.scss' as *;
 @use '../../global-styles/_screens.scss' as *;
 @use '../../global-styles/_buttons.scss' as *;
+@use '../../global-styles/_carousel.scss' as *;
 
 .testimonials {
   display: flex;
   justify-content: center;
   align-items: center;
   max-width: 2000px;
-  margin: 1.5rem auto;
+  // margin: 1.5rem auto;
+  margin: 0;
+  width: 100vw;
+height:280px;
+// border: solid 5px  burlywood;
+&__container{
+  // border: solid 5px fuchsia;
+  // width: 95vww;
+  // max-height: 280px;
+  // // height: 100%;
+  // border: solid 5px fuchsia;
+  width: 95vw;
+  height: 100%; // Set consistent height
+  max-height: 280px; // Ensure container doesn't exceed main height
+  display: flex; 
+  align-items: center
+}
 
-  &__container {
-    position: relative;
-    width: 95%;
-    overflow: hidden;
+&__list {
+  
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+  width: 95vw;
+    height: 100%;
+    max-height: 100%;
+    // border: solid 5px yellowgreen;
   }
+.testimonials__figure{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  // border: solid 5px blueviolet;
+  width: 95%;
+  max-height: 100%;
+}
 
-  &__list {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    margin: 0;
-    padding: 0;
-  }
-
-    &__item {
-      opacity: 1;                // Start with hidden opacity
-      visibility: visible;       // And hidden visibility
-      position: absolute;         // Overlap testimonials for carousel effect
-      width: 100%;                // Full width
-      display: flex;
-      flex-direction: row;
-      transition: opacity 1s ease-in-out, visibility 0.5s;
-
-    &--active {
-      opacity: 1;
-      visibility: visible;
-    }
-  }
 
   &__pic-container {
     .testimonials__author-pic {
@@ -58,9 +68,10 @@
     margin-left: 10px;
     display: flex;
     flex-direction: column;
-
+    
     .testimonials__quote {
       font-size: 1.5rem;
+      @include font-italic(1.5rem);
     }
 
     .testimonials__author {
@@ -70,43 +81,30 @@
   }
 }
 
-// Carousel Animation for Small Screens
-@keyframes carouselAnimation {
-  0%, 75% {
-    opacity: 1;
-    visibility: visible;
-  }
-  80%, 100% {
-    opacity: 0;
-    visibility: hidden;
-  }
-}
-
-//  animation for each testimonial item
-.testimonials__item:nth-child(1) {
-  animation: carouselAnimation 12s infinite ease-in-out;
-}
-
-.testimonials__item:nth-child(2) {
-  animation: carouselAnimation 12s infinite ease-in-out 6s;
-}
 
 // ----------------------Large Screen Adjustments-----------------------
 @include large-screen {
-  .testimonials {
-    max-width: 95vw;
+    .testimonials {
+     width: 100%;
+      max-width: 2000px;
+      // margin: 1.5rem auto;
+    
+      
+      &__list {
+    max-width: 2000px;
+    justify-content: center;
     // border: solid 5px blue;
+      }
     .testimonials__container {
       display: flex;
       justify-content: center;
-      .testimonials__list {
-
-        flex-direction: row;
-      }
+      // .testimonials__list {
+      //   flex-direction: row;
+      // }
       .testimonials__item {
         position: static;
         width: 90vw;
-        opacity: 1;
+
         // border: solid 5px brown;
         visibility: visible;
         width: auto;
@@ -135,162 +133,3 @@
     }
   }
 }
-
-
-
-// @use '../../global-styles/_colors.scss' as *;
-// @use '../../global-styles/_fonts.scss' as *;
-// @use '../../global-styles/_screens.scss' as *;
-// @use '../../global-styles/_buttons.scss' as *;
-
-
-// .testimonials {
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     width: 100vw;
-//     height: auto;
-//     position: relative;
-//     margin: 1.5rem 0;
-
-//     .testimonial-container {
-//       display: flex;
-//       justify-content: center;
-//       align-items: center;
-//       position: relative;
-//       width: 95vw;
-//       height: auto;
-//       overflow: hidden;
-
-//       .testimonial {
-//         position: absolute;
-//         opacity: 0; // Initially hidden
-//         visibility: hidden; 
-//         transition: opacity 1s ease-in-out, visibility 0.5; 
-//         display: flex;
-//         flex-direction: row;
-//         width: 98vw;
-//         height: auto;
-//         border: solid pink;
-//       }
-
-//       .testimonial--active {
-//         opacity: 1;
-//         visibility: visible; // Make the active testimonial visible
-//         display: flex;
-//         position: relative;
-//         transition: opacity 1s ease-in-out, visibility 0.5s; 
-//       }
-
-//       .testimonial-text {
-//         margin-left: 10px;
-//         display: flex;
-//         flex-direction: column;
-//         justify-content: space-between;
-//         height: auto;
-//         .testimonial__quote{
-//         @include font-style($size:1.5rem);
-//         }
-//         .testimonial__author{
-//           padding-top: 0.5rem;
-//           font-size:1.125rem;
-
-//         }
-//       }
-
-//       .pic-container {
-//         .author-pic {
-//           height: 73px;
-//           width: 72px;
-//           border-radius: 50%;
-
-//           .testimonial__img {
-//             height: 100%;
-//             width: 100%;
-//             border-radius: 50%;
-//           }
-//         }
-//       }
-//     }
-//   }
-
-//   // Carousel animation using keyframes
-//   @keyframes carouselAnimation {
-//     0%, 75% {
-//       opacity: 1; // Visible for 75% of the time
-//       visibility: visible;
-//     }
-//     80%, 100% {
-//       opacity: 0;
-//       visibility: hidden; 
-//     }
-//   }
-
-//   // Apply the animation to alternate between testimonials
-//   .testimonial-container .testimonial:nth-child(1) {
-//     animation: carouselAnimation 12s infinite ease-in-out;
-//   }
-
-//   .testimonial-container .testimonial:nth-child(2) {
-//     animation: carouselAnimation 12s infinite ease-in-out 6s; 
-//   }
-
-//   // Media queries for responsiveness
-//   @include small-screen {
-//     .testimonials {
-//       flex-direction: column;
-
-//       .testimonial-container {
-//         .testimonial {
-//           width: 90vw; 
-//         }
-//       }
-//     }
-//   }
-
-//   @include large-screen {
-//     .testimonials {
-//       max-width: 2000px;
-//       margin-top: 100px;
-//       flex-direction: row;
-//       align-items: center;
-
-//       .testimonial-container {
-//         border: solid 2px pink;
-//         .testimonial {
-//           opacity: 1; 
-//           position: static; 
-//           animation: none; 
-//           visibility: visible;
-//         }
-
-//         .dots {
-//           display: none; 
-//         }
-
-//         .testimonial-text {
-//           .testimonial__quote {
-//             @include font-italic(1.5rem);
-//           }
-
-//           .testimonial__author {
-//             padding-right: 10px;
-//             @include font-style($size: 1.125rem);
-//           }
-//         }
-
-//         .pic-container {
-//           .author-pic {
-//             height: 96px;
-//             width: 96px;
-
-//             .testimonial__img {
-//               height: 100%;
-//               width: 100%;
-//             }
-//           }
-//         }
-//       }
-//     }
-//   }
-
