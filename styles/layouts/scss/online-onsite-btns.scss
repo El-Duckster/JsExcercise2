@@ -8,29 +8,24 @@
     display: flex;
     justify-content: space-around;
     height: auto;
-    // width: 100%;//480
-// padding-left: 0;
     margin: auto;
-    // border:solid greenyellow;
     padding: 2.5rem 0 2.5rem 0 ;//10px 
     
-    .main__btns-list{
-        
-        // border:solid firebrick;
-        margin: auto;     
+    &-list{
         display: flex;
+        flex-direction:column;
         justify-content: center;
         align-items: center;
         width: 100%; //480
-        flex-direction:column;
+        margin: auto;    
+         
         .main__btns-item{
-
             max-width: 400px;
             min-width: 308;
           
             .main__btn{
 
-                padding: 0 2.5rem 0 2.5rem ;//10px 
+                padding: 0 2.5rem ;//10px 
                 @include font-bold(1.75rem) ;//28px
                 color:$color-navy;
                 border-radius: 0.3rem;
@@ -65,8 +60,6 @@
         flex-direction: row-reverse;
         width:55%;
         .main__btns-item{
-            // width:100%;//308-10/1280
-
             flex:1;
             min-width: 280px;
             .main__btn{

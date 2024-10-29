@@ -46,14 +46,6 @@
   }
 }
 
-// body {
-//   max-width: 37.5rem;
-//   margin: 0 auto;
-//   padding: 0 1.25rem;
-//   font-family: 'Lato', sans-serif;
-// }
-
-
 *::-webkit-scrollbar {
   width: 0;
 }
@@ -73,9 +65,6 @@
 
 .carousel {
   position: relative;
-  // padding-top: 75%;
-  // filter: drop-shadow(0 0 10px #0003);
-  // perspective: 100px;
 }
 
 .carousel__viewport {
@@ -100,16 +89,12 @@
   counter-increment: item;
 }
 
-// .carousel__slide:nth-child(even) {
-//   background-color: #99f;
-// }
-
 .carousel__slide:before {
   content: counter(item);
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate3d(-50%,-40%,70px);
+  transform: translate3d(-50%, -40%, 70px);
   color: $color-light-blue;
   font-size: 2em;
 }
@@ -160,18 +145,6 @@
   display: inline-block;
 }
 
-// .carousel__navigation-button {
-//   display: inline-block;
-//   width: 1.5rem;
-//   height: 1.5rem;
-//   background-color: $color-light-blue;
-//   background-clip: content-box;
-//   border: 0.05px solid $color-blue;
-//   border-radius: 50%;
-//   font-size: 0;
-//   transition: transform 0.1s;
-// }
-
 .carousel::before,
 .carousel::after,
 .carousel__prev,
@@ -197,54 +170,31 @@
   right: -1rem;
 }
 
-// .carousel::before,
-// .carousel::after {
-//   content: '';
-//   z-index: 1;
-//   background-color: #333;
-//   background-size: 1.5rem 1.5rem;
-//   background-repeat: no-repeat;
-//   background-position: center center;
-//   color: #fff;
-//   font-size: 2.5rem;
-//   line-height: 4rem;
-//   text-align: center;
-//   pointer-events: none;
-// }
-
-// .carousel::before {
-//   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='0,50 80,100 80,0' fill='%23fff'/%3E%3C/svg%3E");
-// }
-
-// .carousel::after {
-//   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='100,50 20,100 20,0' fill='%23fff'/%3E%3C/svg%3E");
-// }
-
-@include large-screen{
+@include large-screen {
   .carousel {
-    position: static; // Reset absolute positioning on large screens
-    padding-top: 0;   // Remove padding
+    position: static;
+    padding-top: 0;
   }
-  
+
   .carousel__viewport {
-    position: static; 
-    padding: 0;       
+    position: static;
+    padding: 0;
     display: flex;
-    overflow: visible; 
+    overflow: visible;
     justify-content: space-between;
     overflow-x: scroll;
     scroll-snap-align: start;
   }
-  
+
   .carousel__slide {
-    flex: 1 0 30%;   
-    width: auto;     
-    position: static; 
-    background-color: transparent; 
+    flex: 1 0 30%;
+    width: auto;
+    position: static;
+    background-color: transparent;
   }
-  
+
   .carousel__slide:before {
-    content: ''; 
+    content: '';
   }
   .carousel__navigation-button,
   .carousel:before,
@@ -254,11 +204,12 @@
   .carousel__prev,
   .carousel__next,
   .carousel__snapper {
-    display: none; 
+    display: none;
   }
+  
   .carousel:hover .carousel__snapper,
-.nav__list__item:hover ~ .carousel__snapper,
-.main__btn:hover ~ .carousel__snapper {
-  animation-name: none;
-}
+  .nav__list__item:hover ~ .carousel__snapper,
+  .main__btn:hover ~ .carousel__snapper {
+    animation-name: none;
+  }
 }

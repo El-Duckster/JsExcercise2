@@ -22,16 +22,16 @@
   @include button-styles($color-red, white);
   &:hover {
     background-color: white;
-    color: $color-red; 
-    border: 2px solid $color-red; 
+    color: $color-red;
+    border: 2px solid $color-red;
   }
 }
 
-@mixin button-secondary(){
+@mixin button-secondary() {
   @include button-styles($color-light-blue, $color-navy);
   &:hover {
-    background-color: $color-navy; // Change background color on hover
-    color: $color-light-blue; // Change text color on hover
+    background-color: $color-navy;
+    color: $color-light-blue;
     border: 2px solid $color-light-blue;
   }
 }

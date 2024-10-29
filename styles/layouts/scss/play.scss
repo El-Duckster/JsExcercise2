@@ -6,91 +6,89 @@
 .play {
   width: 100vw;
   max-width: 2000px;
-  .play__container {
+
+  &__container {
     display: flex;
-    min-width: 340px;
     flex-direction: column;
+    min-width: 340px;
     margin-bottom: 2rem;
   }
-  .play__image__container {
+  &__image__container {
     width: 100%;
+    
     .play__image {
       width: 100%;
       height: auto;
     }
   }
-  .play__details {
+  &__details {
     padding: 15px;
     display: flex;
     flex-direction: column;
     margin: 0 auto;
-    margin-bottom:50px;
+    margin-bottom: 50px;
+    &:hover {
+      transform: scale(1.04); 
+    }
 
     .play__title {
       @include font-bold(2rem);
       padding-top: 0.8rem;
-      // padding-top: 0.5rem 0;
     }
     .play__description {
       display: block;
-      @include font-style($size :1.5rem);
+      @include font-style($size: 1.5rem);
+      margin: 1rem 0;
       padding: 2rem 0;
     }
     .play__btn {
       width: 75%; //21+21 +308/480
       @include button-primary();
-      // @include button-styles($color-red, white);
-      // @include font-bold(1.5rem);
       @include font-bold(1.5rem);
-      padding:  0 20px;
+      padding: 0 20px;
     }
   }
 }
 
 @include large-screen {
-  .play {
-    max-width: 1280;
-    bottom: 0;
-    // min-height: 467px;
 
     .play__container {
-      width: 100vw;
-      max-width: 2000px;
       display: grid;
-      gap: 0;
       grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: auto auto;
+      gap: 0;
       align-items: center;
       justify-items: center;
-      margin-bottom:200px;
+      margin-bottom: 12.5rem;
+
       .play__details {
-        // padding:0.5rem 3.5rem;
-        margin: auto 5% auto 5%;
-        // border: solid forestgreen;
-      max-width: 70%;
-      min-width: 480px;
-       padding: auto;
-&__description{
-  padding: 0.5rem 0;
-}
+        max-width: 70%;
+        min-width: 480px;
+        margin: auto 5%;
+
+        &__description {
+          padding: 0.5rem 0;
+          margin: 0;
+        }
       }
 
       .item1 {
-        grid-column: 1;
-        grid-row: 1;
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
       }
+
       .item2 {
-        grid-column: 2;
-        grid-row: 1;
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
       }
+
       .item3 {
-        grid-column: 2;
-        grid-row: 2;
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
       }
+
       .item4 {
-        grid-column: 1;
-        grid-row: 2;
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
       }
     }
   }
-}

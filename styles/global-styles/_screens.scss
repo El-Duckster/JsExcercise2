@@ -4,15 +4,11 @@
     }
   }
 
-
-
 @mixin large-screen {
     @media screen and (min-width: 869px) { //640 px
         @content;
     }
 }
-
-
 
 // @mixin large-screen {
 //     @media screen and (min-width: 1367px) {
