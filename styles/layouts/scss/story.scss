@@ -29,11 +29,10 @@
     }
 
     .story__btn {
-      width: 250px;
-      min-height: 66px;
       @include button-styles(transparent, $color-light-blue);
-      @include font-bold(1.125rem);
+      @include font-bold(1.5rem);
       border: 2px solid $color-light-blue;
+      
       &:hover {
         background-color: $color-light-blue;
         color: $color-navy;

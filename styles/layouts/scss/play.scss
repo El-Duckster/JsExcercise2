@@ -39,10 +39,9 @@
       padding: 2rem 0;
     }
     .play__btn {
-      width: 75%; //21+21 +308/480
+      width: 80%; //21+21 +308/480
       @include button-primary();
       @include font-bold(1.5rem);
-      padding: 0 20px;
     }
   }
 }
