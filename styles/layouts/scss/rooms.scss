@@ -9,7 +9,7 @@
   .rooms {
     display: block;
     // position:relative;
-    padding-top: 25%;
+    padding-top: 20%;
     // border: solid 5px greenyellow;
     max-width: 2000px;
     margin: 15px ;  
@@ -40,12 +40,13 @@
     max-width: 2000px;
     border-radius:10px ;    
     margin: 10px;
+    padding: 20px;
     
     .roomy {
-        border-radius:10px ; 
-        box-shadow: 0 0 10px rgba(0, 0,0, 0.25) ;
-        width: 95%; 
-        overflow: hidden;
+      border-radius:10px ; 
+      box-shadow: 0 0 10px rgba(0, 0,0, 0.25) ;
+      overflow: hidden;
+      width: 85%; 
         // border: solid rgba(0, 0, 0, 0.1);
         // border: solid 5px blue;
         // height: 446px;
