@@ -1,4 +1,5 @@
 @use '_colors.scss' as *;
+@use '_screens.scss' as *;
 
 @keyframes tonext {
   75% {
@@ -159,17 +160,17 @@
   display: inline-block;
 }
 
-.carousel__navigation-button {
-  display: inline-block;
-  width: 1.5rem;
-  height: 1.5rem;
-  background-color: $color-light-blue;
-  background-clip: content-box;
-  border: 0.05px solid $color-blue;
-  border-radius: 50%;
-  font-size: 0;
-  transition: transform 0.1s;
-}
+// .carousel__navigation-button {
+//   display: inline-block;
+//   width: 1.5rem;
+//   height: 1.5rem;
+//   background-color: $color-light-blue;
+//   background-clip: content-box;
+//   border: 0.05px solid $color-blue;
+//   border-radius: 50%;
+//   font-size: 0;
+//   transition: transform 0.1s;
+// }
 
 .carousel::before,
 .carousel::after,
@@ -218,3 +219,40 @@
 // .carousel::after {
 //   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='100,50 20,100 20,0' fill='%23fff'/%3E%3C/svg%3E");
 // }
+
+@include large-screen{
+  .carousel {
+    position: static; // Reset absolute positioning on large screens
+    padding-top: 0;   // Remove padding
+  }
+  
+  .carousel__viewport {
+    position: static; 
+    padding: 0;       
+    display: flex;
+    overflow: visible; 
+    justify-content: space-between;
+    overflow-x: scroll;
+    scroll-snap-align: start;
+  }
+  
+  .carousel__slide {
+    flex: 1 0 30%;   
+    width: auto;     
+    position: static; 
+    background-color: transparent; 
+  }
+  
+  .carousel__slide:before {
+    content: ''; 
+  }
+  .carousel__navigation-button,
+  .carousel:before,
+  .carousel__navigation,
+  .carousel::before,
+  .carousel::after,
+  .carousel__prev,
+  .carousel__next {
+    display: none; 
+  }
+}

@@ -38,24 +38,24 @@
     width: 100%;
     // height: 446px;
     max-width: 2000px;
-    border-radius:15px ;    
+    border-radius:10px ;    
     margin: 10px;
     
-    
     .roomy {
-        border-radius:15px ; 
-        box-shadow: 0px 5px 8px rgba(182, 189, 181, 0.5) ;
+        border-radius:10px ; 
+        box-shadow: 0 0 10px rgba(0, 0,0, 0.25) ;
         width: 95%; 
         overflow: hidden;
         // border: solid rgba(0, 0, 0, 0.1);
         // border: solid 5px blue;
         // height: 446px;
         margin-bottom: 20px;
+        margin-left: 10px;
       transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 
       &:hover {
         transform: translateY(-5px); 
-        box-shadow: 5px 10px 10px rgba(182, 189, 181, 1) ;
+        box-shadow: 0 5px 10px 4px rgba(0, 0, 0, 0.3) ;
     }
     
     .room__image-container {
@@ -121,58 +121,12 @@
         
       }
     }
-    // Each room card
-    // .room {
-    //   // flex: 1 0 100%; // Each room takes 100% width
-    //   padding: 10px;
-    //   background-color: #fff;
-    //   // border: 1px solid #ddd;
-    //   border-radius: 8px;
-    //   margin: 0 15px;
-    //   text-align: center;
-    // }
   }}
 
 
 
 @include large-screen{
   
-
-  .carousel {
-    position: static; // Reset absolute positioning on large screens
-    padding-top: 0;   // Remove padding
-  }
-  
-  .carousel__viewport {
-    position: static; 
-    padding: 0;       
-    display: flex;
-    overflow: visible; 
-    justify-content: space-between;
-    overflow-x: scroll;
-    scroll-snap-align: start;
-  }
-  
-  .carousel__slide {
-    flex: 1 0 30%;   
-    width: auto;     
-    position: static; 
-    background-color: transparent; 
-  }
-  
-  .carousel__slide:before {
-    content: ''; 
-  }
-  .carousel__navigation-button,
-  .carousel:before,
-  .carousel__navigation,
-  .carousel::before,
-  .carousel::after,
-  .carousel__prev,
-  .carousel__next {
-    display: none; 
-  }
-
   .rooms {
     display: flex;
     position: static;
@@ -182,6 +136,7 @@
     // height: auto;
     margin: 50px 0 100px;
     max-width: 2000px;
+    padding: 0;
     
     .rooms__title{
       // border: solid rgb(81, 130, 9);
@@ -207,11 +162,18 @@
            overflow: visible;
           //  height: 550px;
         //    min-height: 450px;
-           
-           
+        &.room1{
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
         }
-        .room__details {
-        // padding: 10px;
+        
+        &.room2{
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      }
+           
+      } 
+      
+    }
+    .room__details {
         display: flex;
         flex-direction: column;
         .room__details__title {
@@ -237,12 +199,11 @@
         padding: 0;
       }
       .room__ratings {
-  margin-right: auto;
-      
-
+        margin-right: auto;
+        
+        
       }
-    
-    }
+      
     }
     }
 

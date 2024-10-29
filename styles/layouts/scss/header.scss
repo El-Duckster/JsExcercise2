@@ -124,17 +124,17 @@
           align-items:center;
           flex-wrap: wrap;
           justify-content: space-evenly;
-          list-style: none;
           
           @include font-bold(1.5rem);
           align-content: space-evenly;
           // align-content: space-evenly;
-          .nav__item {
+          &__item {
+            color: red;
               &:hover {
                 color: $color-light-blue;
               }
-            }
-          }
         }
       }
+    }
+  }
   }
