@@ -80,11 +80,15 @@
         .room__participants {
           @include font-style($size: 0.8rem); //14px
           padding: 0 0 5px 5px;
-          margin-left: 5px;
+          margin: 1rem 0;
         }
 
         .room__ratings {
           display: flex;
+          .star{
+            height: 30px;
+            width: 30px;
+          }
         }
       }
 
@@ -96,7 +100,7 @@
       .room__btn {
         @include button-primary();
         font-size: 1rem;
-        width: 60%;
+        width: 50%;
         padding: 0 1rem;
         align-self: flex-end;
       }
@@ -148,15 +152,10 @@
   .room__details {
     display: flex;
     flex-direction: column;
+
     &__title {
-      // color: red;
       @include font-style($size: 1.7rem);
       padding-top: 0.5rem;
-
-      &::after {
-        content: ' (on-site)';
-        display: inline;
-      }
     }
   }
 
@@ -164,12 +163,12 @@
     display: flex;
     justify-content: space-between;
 
-    &__participants {
+    .room__participants {
       margin-left: auto;
       @include font-style($size: 0.9rem); //14px
       padding: 0;
     }
-    &__ratings {
+    .room__ratings {
       margin-right: auto;
     }
   }

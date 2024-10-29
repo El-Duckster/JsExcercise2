@@ -27,10 +27,7 @@
     flex-direction: column;
     margin: 0 auto;
     margin-bottom: 50px;
-    &:hover {
-      transform: scale(1.04); 
-    }
-
+    
     .play__title {
       @include font-bold(2rem);
       padding-top: 0.8rem;
@@ -51,19 +48,22 @@
 }
 
 @include large-screen {
-
-    .play__container {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 0;
-      align-items: center;
-      justify-items: center;
-      margin-bottom: 12.5rem;
-
-      .play__details {
-        max-width: 70%;
-        min-width: 480px;
-        margin: auto 5%;
+  
+  .play__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+    align-items: center;
+    justify-items: center;
+    margin-bottom: 12.5rem;
+    
+    .play__details {
+      max-width: 70%;
+      min-width: 480px;
+      margin: auto 5%;
+      &:hover {
+        transform: scale(1.04); 
+      }
 
         &__description {
           padding: 0.5rem 0;
