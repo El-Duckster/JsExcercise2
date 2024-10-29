@@ -128,11 +128,10 @@
           @include font-bold(1.5rem);
           align-content: space-evenly;
           // align-content: space-evenly;
-          &__item {
-            color: red;
-              &:hover {
-                color: $color-light-blue;
-              }
+          .nav__item {
+            &:hover {
+              color: $color-light-blue;
+            }
         }
       }
     }

@@ -252,7 +252,13 @@
   .carousel::before,
   .carousel::after,
   .carousel__prev,
-  .carousel__next {
+  .carousel__next,
+  .carousel__snapper {
     display: none; 
   }
+  .carousel:hover .carousel__snapper,
+.nav__list__item:hover ~ .carousel__snapper,
+.main__btn:hover ~ .carousel__snapper {
+  animation-name: none;
+}
 }
