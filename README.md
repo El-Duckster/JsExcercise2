@@ -1,2 +1,2 @@
 # Startsida-f-r-ESC-Hacker-Escape-Rooms
-Assignment #2 CSS  for Lernia yrkeshögskola
+Assignment #2 JavaScript  for Lernia yrkeshögskola
