@@ -196,13 +196,17 @@
       &__menu {
         display: flex;
         width: 95%;
-        flex-wrap: wrap;
         align-items: center;
         justify-content: space-evenly;
         align-content: space-evenly;
-        @include font-bold(1.5rem);
+        
+        .nav__menuItem {
+          margin-bottom: 0;
+        }
+      
 
         .nav__menuLink {
+          @include font-bold(1.5rem);
           &:hover {
             color: $color-light-blue;
           }
